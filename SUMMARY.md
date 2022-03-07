@@ -25,7 +25,7 @@
   * [Microsoft Azure Storage Driver](storage-drivers/azure.md)
   * [Filesystem Storage Driver](storage-drivers/filesystem.md)
   * [Google Cloud Storage Driver](storage-drivers/gcs.md)
-  * [Docker Registry Storage Driver](storage-drivers/index.md)
+  * [Registry Storage Driver](storage-drivers/index.md)
   * [In Memory Storage Driver Testing Only](storage-drivers/inmemory.md)
   * [Aliyun OSS Storage Driver](storage-drivers/oss.md)
   * [S 3 Storage Driver](storage-drivers/s3.md)

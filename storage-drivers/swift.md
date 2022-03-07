@@ -4,8 +4,6 @@ keywords: registry, service, driver, images, storage, swift
 title: OpenStack Swift storage driver
 ---
 
-{% include registry.md %}
-
 An implementation of the `storagedriver.StorageDriver` interface that uses
 [OpenStack Swift](http://docs.openstack.org/developer/swift/) for object
 storage.
@@ -23,6 +21,8 @@ storage.
 | `tenantid`  |  no | Your Openstack tenant name. You can either use `tenant` or `tenantid`. |
 | `domain`  |  no  | Your Openstack domain name for Identity v3 API. You can either use `domain` or `domainid`. |
 | `domainid`  | no   | Your Openstack domain name for Identity v3 API. You can either use `domain` or `domainid`. |
+| `tenantdomain`  | no   | Your tenant's Openstack domain name for Identity v3 API. Only necessary if different from the <code>domain</code>. You can either use `tenantdomain` or `tenantdomainid`. |
+| `tenantdomainid`  | no   | Your tenant's Openstack domain id for Identity v3 API. Only necessary if different from the <code>domain</code>. You can either use `tenantdomain` or `tenantdomainid`. |
 | `trustid`  |  no  | Your Openstack trust ID for Identity v3 API. |
 | `insecureskipverify`  | no   | Skips TLS verification if the value is wet to	`true`. The default is `false`. |
 | `chunksize`  |  no  | Size of the data segments for the Swift Dynamic Large Objects. This value should be a number (defaults to 5M). |

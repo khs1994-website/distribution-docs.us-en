@@ -4,8 +4,6 @@ keywords: registry, on-prem, images, tags, repository, distribution, insecure
 title: Test an insecure registry
 ---
 
-{% include registry.md %}
-
 While it's highly recommended to secure your registry using a TLS certificate
 issued by a known CA, you can choose to use self-signed certificates, or use
 your registry over an unencrypted HTTP connection. Either of these choices
@@ -72,7 +70,7 @@ This is more secure than the insecure registry solution.
       -x509 -days 365 -out certs/domain.crt
     ```
 
-    Be sure to use the name `myregistrydomain.com` as a CN.
+    Be sure to use the name `myregistry.domain.com` as a CN.
 
 2.  Use the result to [start your registry with TLS enabled](./deploying.md#get-a-certificate).
 
