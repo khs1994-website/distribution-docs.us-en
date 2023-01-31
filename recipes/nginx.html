@@ -1,0 +1,966 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Authenticate Proxy With Nginx · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Restricting access to your registry using a nginx proxy">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="osx-setup-guide.html" />
+    
+    
+    <link rel="prev" href="mirror.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="apache.html">
+            
+                <a href="apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="mirror.html">
+            
+                <a href="mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.4" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="osx-setup-guide.html">
+            
+                <a href="osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../spec/auth/">
+            
+                <a href="../spec/auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../spec/auth/jwt.html">
+            
+                <a href="../spec/auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../spec/auth/oauth.html">
+            
+                <a href="../spec/auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../spec/auth/scope.html">
+            
+                <a href="../spec/auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../spec/auth/token.html">
+            
+                <a href="../spec/auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../spec/api.html">
+            
+                <a href="../spec/api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../spec/deprecated-schema-v1.html">
+            
+                <a href="../spec/deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../spec/implementations.html">
+            
+                <a href="../spec/implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../spec/json.html">
+            
+                <a href="../spec/json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../spec/manifest-v2-1.html">
+            
+                <a href="../spec/manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../spec/manifest-v2-2.html">
+            
+                <a href="../spec/manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../spec/menu.html">
+            
+                <a href="../spec/menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../storage-drivers/azure.html">
+            
+                <a href="../storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../storage-drivers/filesystem.html">
+            
+                <a href="../storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../storage-drivers/gcs.html">
+            
+                <a href="../storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../storage-drivers/">
+            
+                <a href="../storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../storage-drivers/inmemory.html">
+            
+                <a href="../storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../storage-drivers/oss.html">
+            
+                <a href="../storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../storage-drivers/s3.html">
+            
+                <a href="../storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../storage-drivers/swift.html">
+            
+                <a href="../storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architecture.html">
+            
+                <a href="../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../compatibility.html">
+            
+                <a href="../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../configuration.html">
+            
+                <a href="../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deploying.html">
+            
+                <a href="../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deprecated.html">
+            
+                <a href="../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../garbage-collection.html">
+            
+                <a href="../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../help.html">
+            
+                <a href="../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../insecure.html">
+            
+                <a href="../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../introduction.html">
+            
+                <a href="../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../notifications.html">
+            
+                <a href="../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Authenticate Proxy With Nginx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="use-case">Use-case</h2>
+<p>People already relying on a nginx proxy to authenticate their users to other
+services might want to leverage it and have Registry communications tunneled
+through the same pipeline.</p>
+<p>Usually, that includes enterprise setups using LDAP/AD on the backend and a SSO
+mechanism fronting their internal http portal.</p>
+<h3 id="alternatives">Alternatives</h3>
+<p>If you just want authentication for your registry, and are happy maintaining
+users access separately, you should really consider sticking with the native
+<a href="../deploying.html#native-basic-auth">basic auth registry feature</a>.</p>
+<h3 id="solution">Solution</h3>
+<p>With the method presented here, you implement basic authentication for docker
+engines in a reverse proxy that sits in front of your registry.</p>
+<p>While we use a simple htpasswd file as an example, any other nginx
+authentication backend should be fairly easy to implement once you are done with
+the example.</p>
+<p>We also implement push restriction (to a limited user group) for the sake of the
+example. Again, you should modify this to fit your mileage.</p>
+<h3 id="gotchas">Gotchas</h3>
+<p>While this model gives you the ability to use whatever authentication backend
+you want through the secondary authentication mechanism implemented inside your
+proxy, it also requires that you move TLS termination from the Registry to the
+proxy itself.</p>
+<blockquote>
+<p><strong>Note</strong>: It is not recommended to bind your registry to <code>localhost:5000</code> without
+authentication. This creates a potential loophole in your registry security.
+As a result, anyone who can log on to the server where your registry is running
+can push images without authentication.</p>
+</blockquote>
+<p>Furthermore, introducing an extra http layer in your communication pipeline
+makes it more complex to deploy, maintain, and debug. Make sure the extra
+complexity is required.</p>
+<p>For instance, Amazon&apos;s Elastic Load Balancer (ELB) in HTTPS mode already sets
+the following client header:</p>
+<pre class="language-"><code>X-Real-IP
+X-Forwarded-For
+X-Forwarded-Proto
+</code></pre><p>So if you have an Nginx instance sitting behind it, remove these lines from the
+example config below:</p>
+<pre class="language-"><code class="lang-none">proxy_set_header  Host              $http_host;   # required for docker client&apos;s sake
+proxy_set_header  X-Real-IP         $remote_addr; # pass on real client&apos;s IP
+proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
+proxy_set_header  X-Forwarded-Proto $scheme;
+</code></pre>
+<p>Otherwise Nginx resets the ELB&apos;s values, and the requests are not routed
+properly. For more information, see
+<a href="https://github.com/distribution/distribution/issues/970" target="_blank">#970</a>.</p>
+<h2 id="setting-things-up">Setting things up</h2>
+<p>Review the <a href="./#requirements">requirements</a>, then follow these steps.</p>
+<ol>
+<li><p>Create the required directories</p>
+<pre class="language-"><code class="lang-console">$ mkdir -p auth data
+</code></pre>
+</li>
+<li><p>Create the main nginx configuration. Paste this code block into a new file called <code>auth/nginx.conf</code>:</p>
+<pre class="language-"><code class="lang-conf">events {
+    worker_connections  1024;
+}
+
+http {
+
+  upstream docker-registry {
+    server registry:5000;
+  }
+
+  ## Set a variable to help us decide if we need to add the
+  ## &apos;Docker-Distribution-Api-Version&apos; header.
+  ## The registry always sets this header.
+  ## In the case of nginx performing auth, the header is unset
+  ## since nginx is auth-ing before proxying.
+  map $upstream_http_docker_distribution_api_version $docker_distribution_api_version {
+    &apos;&apos; &apos;registry/2.0&apos;;
+  }
+
+  server {
+    listen 443 ssl;
+    server_name myregistrydomain.com;
+
+    # SSL
+    ssl_certificate /etc/nginx/conf.d/domain.crt;
+    ssl_certificate_key /etc/nginx/conf.d/domain.key;
+
+    # Recommendations from https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html
+    ssl_protocols TLSv1.1 TLSv1.2;
+    ssl_ciphers &apos;EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH&apos;;
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:10m;
+
+    # disable any limits to avoid HTTP 413 for large image uploads
+    client_max_body_size 0;
+
+    # required to avoid HTTP 411: see Issue #1486 (https://github.com/moby/moby/issues/1486)
+    chunked_transfer_encoding on;
+
+    location /v2/ {
+      # Do not allow connections from docker 1.5 and earlier
+      # docker pre-1.6.0 did not properly set the user agent on ping, catch &quot;Go *&quot; user agents
+      if ($http_user_agent ~ &quot;^(docker\/1\.(3|4|5(?!\.[0-9]-dev))|Go ).*$&quot; ) {
+        return 404;
+      }
+
+      # To add basic authentication to v2 use auth_basic setting.
+      auth_basic &quot;Registry realm&quot;;
+      auth_basic_user_file /etc/nginx/conf.d/nginx.htpasswd;
+
+      ## If $docker_distribution_api_version is empty, the header is not added.
+      ## See the map directive above where this variable is defined.
+      add_header &apos;Docker-Distribution-Api-Version&apos; $docker_distribution_api_version always;
+
+      proxy_pass                          http://docker-registry;
+      proxy_set_header  Host              $http_host;   # required for docker client&apos;s sake
+      proxy_set_header  X-Real-IP         $remote_addr; # pass on real client&apos;s IP
+      proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
+      proxy_set_header  X-Forwarded-Proto $scheme;
+      proxy_read_timeout                  900;
+    }
+  }
+}
+</code></pre>
+</li>
+<li><p>Create a password file <code>auth/nginx.htpasswd</code> for &quot;testuser&quot; and &quot;testpassword&quot;.</p>
+<pre class="language-"><code class="lang-console">$ docker run --rm --entrypoint htpasswd registry:2 -Bbn testuser testpassword &gt; auth/nginx.htpasswd
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: If you do not want to use <code>bcrypt</code>, you can omit the <code>-B</code> parameter.</p>
+</blockquote>
+</li>
+<li><p>Copy your certificate files to the <code>auth/</code> directory.</p>
+<pre class="language-"><code class="lang-console">$ cp domain.crt auth
+$ cp domain.key auth
+</code></pre>
+</li>
+<li><p>Create the compose file. Paste the following YAML into a new file called <code>docker-compose.yml</code>.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">nginx</span><span class="token punctuation">:</span>
+  <span class="token comment"># Note : Only nginx:alpine supports bcrypt.</span>
+  <span class="token comment"># If you don&apos;t need to use bcrypt, you can use a different tag.</span>
+  <span class="token comment"># Ref. https://github.com/nginxinc/docker-nginx/issues/29</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">&quot;nginx:alpine&quot;</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> 5043<span class="token punctuation">:</span><span class="token number">443</span>
+  <span class="token key atrule">links</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> registry<span class="token punctuation">:</span>registry
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ./auth<span class="token punctuation">:</span>/etc/nginx/conf.d
+    <span class="token punctuation">-</span> ./auth/nginx.conf<span class="token punctuation">:</span>/etc/nginx/nginx.conf<span class="token punctuation">:</span>ro
+
+<span class="token key atrule">registry</span><span class="token punctuation">:</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span> registry<span class="token punctuation">:</span><span class="token number">2</span>
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ./data<span class="token punctuation">:</span>/var/lib/registry
+</code></pre>
+</li>
+</ol>
+<h2 id="starting-and-stopping">Starting and stopping</h2>
+<p>Now, start your stack:</p>
+<pre class="language-"><code>docker-compose up -d
+</code></pre><p>Login with a &quot;push&quot; authorized user (using <code>testuser</code> and <code>testpassword</code>), then
+tag and push your first image:</p>
+<pre class="language-"><code>docker login -u=testuser -p=testpassword -e=root@example.ch myregistrydomain.com:5043
+docker tag ubuntu myregistrydomain.com:5043/test
+docker push myregistrydomain.com:5043/test
+docker pull myregistrydomain.com:5043/test
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mirror.html" class="navigation navigation-prev " aria-label="Previous page: Registry As A Pull Through Cache">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="osx-setup-guide.html" class="navigation navigation-next " aria-label="Next page: Mac OS Setup Guide">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Restricting access to your registry using a nginx proxy","keywords":"registry, on-prem, images, tags, repository, distribution, nginx, proxy, authentication, TLS, recipe, advanced","title":"Authenticate Proxy With Nginx","redirect_from":["/registry/nginx/"],"level":"1.1.4","depth":2,"next":{"title":"Mac OS Setup Guide","level":"1.1.5","depth":2,"path":"recipes/osx-setup-guide.md","ref":"recipes/osx-setup-guide.md","articles":[]},"previous":{"title":"Registry As A Pull Through Cache","level":"1.1.3","depth":2,"path":"recipes/mirror.md","ref":"recipes/mirror.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"recipes/nginx.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,895 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Registry As A Pull Through Cache · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Setting-up a local mirror for Docker Hub images">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nginx.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="apache.html">
+            
+                <a href="apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.3" data-path="mirror.html">
+            
+                <a href="mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="osx-setup-guide.html">
+            
+                <a href="osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../spec/auth/">
+            
+                <a href="../spec/auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../spec/auth/jwt.html">
+            
+                <a href="../spec/auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../spec/auth/oauth.html">
+            
+                <a href="../spec/auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../spec/auth/scope.html">
+            
+                <a href="../spec/auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../spec/auth/token.html">
+            
+                <a href="../spec/auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../spec/api.html">
+            
+                <a href="../spec/api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../spec/deprecated-schema-v1.html">
+            
+                <a href="../spec/deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../spec/implementations.html">
+            
+                <a href="../spec/implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../spec/json.html">
+            
+                <a href="../spec/json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../spec/manifest-v2-1.html">
+            
+                <a href="../spec/manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../spec/manifest-v2-2.html">
+            
+                <a href="../spec/manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../spec/menu.html">
+            
+                <a href="../spec/menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../storage-drivers/azure.html">
+            
+                <a href="../storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../storage-drivers/filesystem.html">
+            
+                <a href="../storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../storage-drivers/gcs.html">
+            
+                <a href="../storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../storage-drivers/">
+            
+                <a href="../storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../storage-drivers/inmemory.html">
+            
+                <a href="../storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../storage-drivers/oss.html">
+            
+                <a href="../storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../storage-drivers/s3.html">
+            
+                <a href="../storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../storage-drivers/swift.html">
+            
+                <a href="../storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architecture.html">
+            
+                <a href="../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../compatibility.html">
+            
+                <a href="../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../configuration.html">
+            
+                <a href="../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deploying.html">
+            
+                <a href="../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deprecated.html">
+            
+                <a href="../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../garbage-collection.html">
+            
+                <a href="../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../help.html">
+            
+                <a href="../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../insecure.html">
+            
+                <a href="../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../introduction.html">
+            
+                <a href="../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../notifications.html">
+            
+                <a href="../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Registry As A Pull Through Cache</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="use-case">Use-case</h2>
+<p>If you have multiple instances of Docker running in your environment, such as
+multiple physical or virtual machines all running Docker, each daemon goes out
+to the internet and fetches an image it doesn&apos;t have locally, from the Docker
+repository. You can run a local registry mirror and point all your daemons
+there, to avoid this extra internet traffic.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Docker Official Images are an intellectual property of Docker.</p>
+</blockquote>
+<h3 id="alternatives">Alternatives</h3>
+<p>Alternatively, if the set of images you are using is well delimited, you can
+simply pull them manually and push them to a simple, local, private registry.</p>
+<p>Furthermore, if your images are all built in-house, not using the Hub at all and
+relying entirely on your local registry is the simplest scenario.</p>
+<h3 id="gotcha">Gotcha</h3>
+<p>It&apos;s currently not possible to mirror another private registry. Only the central
+Hub can be mirrored.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Mirrors of Docker Hub are still subject to Docker&apos;s <a href="https://www.docker.com/pricing/resource-consumption-updates" target="_blank">fair usage policy</a>{: target=&quot;blank&quot; rel=&quot;noopener&quot; class=&#x201C;&#x201D;}.</p>
+</blockquote>
+<h3 id="solution">Solution</h3>
+<p>The Registry can be configured as a pull through cache. In this mode a Registry
+responds to all normal docker pull requests but stores all content locally.</p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>The first time you request an image from your local registry mirror, it pulls
+the image from the public Docker registry and stores it locally before handing
+it back to you. On subsequent requests, the local registry mirror is able to
+serve the image from its own storage.</p>
+<h3 id="what-if-the-content-changes-on-the-hub">What if the content changes on the Hub?</h3>
+<p>When a pull is attempted with a tag, the Registry checks the remote to
+ensure if it has the latest version of the requested content. Otherwise, it
+fetches and caches the latest content.</p>
+<h3 id="what-about-my-disk">What about my disk?</h3>
+<p>In environments with high churn rates, stale data can build up in the cache.
+When running as a pull through cache the Registry periodically removes old
+content to save disk space. Subsequent requests for removed content causes a
+remote fetch and local re-caching.</p>
+<p>To ensure best performance and guarantee correctness the Registry cache should
+be configured to use the <code>filesystem</code> driver for storage.</p>
+<h2 id="run-a-registry-as-a-pull-through-cache">Run a Registry as a pull-through cache</h2>
+<p>The easiest way to run a registry as a pull through cache is to run the official
+Registry image.
+At least, you need to specify <code>proxy.remoteurl</code> within <code>/etc/docker/registry/config.yml</code>
+as described in the following subsection.</p>
+<p>Multiple registry caches can be deployed over the same back-end. A single
+registry cache ensures that concurrent requests do not pull duplicate data,
+but this property does not hold true for a registry cache cluster.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Service accounts included in the Team plan are limited to 5,000 pulls per day. See <a href="../docker-hub/service-accounts">Service Accounts</a> for more details.</p>
+</blockquote>
+<h3 id="configure-the-cache">Configure the cache</h3>
+<p>To configure a Registry to run as a pull through cache, the addition of a
+<code>proxy</code> section is required to the config file.</p>
+<p>To access private images on the Docker Hub, a username and password can
+be supplied.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">proxy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">remoteurl</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//registry<span class="token punctuation">-</span>1.docker.io
+  <span class="token key atrule">username</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>username<span class="token punctuation">]</span>
+  <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>password<span class="token punctuation">]</span>
+</code></pre>
+<blockquote>
+<p><strong>Warning</strong>: If you specify a username and password, it&apos;s very important to
+understand that private resources that this user has access to Docker Hub is
+made available on your mirror. <strong>You must secure your mirror</strong> by
+implementing authentication if you expect these resources to stay private!</p>
+<p><strong>Warning</strong>: For the scheduler to clean up old entries, <code>delete</code> must
+be enabled in the registry configuration. See
+<a href="../configuration.html">Registry Configuration</a> for more details.</p>
+</blockquote>
+<h3 id="configure-the-docker-daemon">Configure the Docker daemon</h3>
+<p>Either pass the <code>--registry-mirror</code> option when starting <code>dockerd</code> manually,
+or edit <a href="../../engine/reference/commandline/dockerd.md#daemon-configuration-file"><code>/etc/docker/daemon.json</code></a>
+and add the <code>registry-mirrors</code> key and value, to make the change persistent.</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;registry-mirrors&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;https://&lt;my-docker-mirror-host&gt;&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Save the file and reload Docker for the change to take effect.</p>
+<blockquote>
+<p>Some log messages that appear to be errors are actually informational messages.</p>
+<p>Check the <code>level</code> field to determine whether
+the message is warning you about an error or is giving you information.
+For example, this log message is informational:</p>
+<pre class="language-"><code class="lang-conf">time=&quot;2017-06-02T15:47:37Z&quot; level=info msg=&quot;error statting local store, serving from upstream: unknown blob&quot; go.version=go1.7.4
+</code></pre>
+<p>It&apos;s telling you that the file doesn&apos;t exist yet in the local cache and is
+being pulled from upstream.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Recipes Overview">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="nginx.html" class="navigation navigation-next " aria-label="Next page: Authenticate Proxy With Nginx">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Setting-up a local mirror for Docker Hub images","keywords":"registry, on-prem, images, tags, repository, distribution, mirror, Hub, recipe, advanced","title":"Registry As A Pull Through Cache","redirect_from":["/engine/admin/registry_mirror/"],"level":"1.1.3","depth":2,"next":{"title":"Authenticate Proxy With Nginx","level":"1.1.4","depth":2,"path":"recipes/nginx.md","ref":"recipes/nginx.md","articles":[]},"previous":{"title":"Recipes Overview","level":"1.1.2","depth":2,"path":"recipes/index.md","ref":"recipes/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"recipes/mirror.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,838 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Google Cloud Storage Driver · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Explains how to use the Google Cloud Storage drivers">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="filesystem.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../recipes/apache.html">
+            
+                <a href="../recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../recipes/">
+            
+                <a href="../recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../recipes/mirror.html">
+            
+                <a href="../recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../recipes/nginx.html">
+            
+                <a href="../recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../recipes/osx-setup-guide.html">
+            
+                <a href="../recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../spec/auth/">
+            
+                <a href="../spec/auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../spec/auth/jwt.html">
+            
+                <a href="../spec/auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../spec/auth/oauth.html">
+            
+                <a href="../spec/auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../spec/auth/scope.html">
+            
+                <a href="../spec/auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../spec/auth/token.html">
+            
+                <a href="../spec/auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../spec/api.html">
+            
+                <a href="../spec/api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../spec/deprecated-schema-v1.html">
+            
+                <a href="../spec/deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../spec/implementations.html">
+            
+                <a href="../spec/implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../spec/json.html">
+            
+                <a href="../spec/json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../spec/manifest-v2-1.html">
+            
+                <a href="../spec/manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../spec/manifest-v2-2.html">
+            
+                <a href="../spec/manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../spec/menu.html">
+            
+                <a href="../spec/menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="azure.html">
+            
+                <a href="azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="gcs.html">
+            
+                <a href="gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="inmemory.html">
+            
+                <a href="inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="oss.html">
+            
+                <a href="oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="s3.html">
+            
+                <a href="s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="swift.html">
+            
+                <a href="swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architecture.html">
+            
+                <a href="../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../compatibility.html">
+            
+                <a href="../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../configuration.html">
+            
+                <a href="../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deploying.html">
+            
+                <a href="../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deprecated.html">
+            
+                <a href="../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../garbage-collection.html">
+            
+                <a href="../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../help.html">
+            
+                <a href="../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../insecure.html">
+            
+                <a href="../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../introduction.html">
+            
+                <a href="../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../notifications.html">
+            
+                <a href="../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Google Cloud Storage Driver</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>An implementation of the <code>storagedriver.StorageDriver</code> interface which uses Google Cloud for object storage.</p>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>bucket</code></td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left">The name of your Google Cloud Storage bucket where you wish to store objects (needs to already be created prior to driver initialization).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>keyfile</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">A private service account key file in JSON format used for <a href="https://cloud.google.com/storage/docs/authentication#service_accounts" target="_blank">Service Account Authentication</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rootdirectory</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The root directory tree in which all registry files are stored. Defaults to the empty string (bucket root). If a prefix is used, the path <code>bucketname/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prefix</span><span class="token punctuation">&gt;</span></span></code> has to be pre-created before starting the registry. The prefix is applied to all Google Cloud Storage keys to allow you to segment data in your bucket if necessary.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>chunksize</code></td>
+<td style="text-align:left">no (default 5242880)</td>
+<td style="text-align:left">This is the chunk size used for uploading large blobs, must be a multiple of 256*1024.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Instead of a key file you can use <a href="https://developers.google.com/identity/protocols/application-default-credentials" target="_blank">Google Application Default Credentials</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="filesystem.html" class="navigation navigation-prev " aria-label="Previous page: Filesystem Storage Driver">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./" class="navigation navigation-next " aria-label="Next page: Registry Storage Driver">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Explains how to use the Google Cloud Storage drivers","keywords":"registry, service, driver, images, storage,  gcs, google, cloud","title":"Google Cloud Storage Driver","level":"1.3.3","depth":2,"next":{"title":"Registry Storage Driver","level":"1.3.4","depth":2,"path":"storage-drivers/index.md","ref":"storage-drivers/index.md","articles":[]},"previous":{"title":"Filesystem Storage Driver","level":"1.3.2","depth":2,"path":"storage-drivers/filesystem.md","ref":"storage-drivers/filesystem.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"storage-drivers/gcs.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

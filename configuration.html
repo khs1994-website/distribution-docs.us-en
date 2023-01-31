@@ -1,0 +1,2571 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configuring A Registry · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Explains how to configure a registry">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="deploying.html" />
+    
+    
+    <link rel="prev" href="compatibility.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="recipes/apache.html">
+            
+                <a href="recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="recipes/">
+            
+                <a href="recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="recipes/mirror.html">
+            
+                <a href="recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="recipes/nginx.html">
+            
+                <a href="recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="recipes/osx-setup-guide.html">
+            
+                <a href="recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="spec/auth/">
+            
+                <a href="spec/auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="spec/auth/jwt.html">
+            
+                <a href="spec/auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="spec/auth/oauth.html">
+            
+                <a href="spec/auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="spec/auth/scope.html">
+            
+                <a href="spec/auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="spec/auth/token.html">
+            
+                <a href="spec/auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="spec/api.html">
+            
+                <a href="spec/api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="spec/deprecated-schema-v1.html">
+            
+                <a href="spec/deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="spec/implementations.html">
+            
+                <a href="spec/implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="spec/">
+            
+                <a href="spec/">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="spec/json.html">
+            
+                <a href="spec/json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="spec/manifest-v2-1.html">
+            
+                <a href="spec/manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="spec/manifest-v2-2.html">
+            
+                <a href="spec/manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="spec/menu.html">
+            
+                <a href="spec/menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="storage-drivers/azure.html">
+            
+                <a href="storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="storage-drivers/filesystem.html">
+            
+                <a href="storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="storage-drivers/gcs.html">
+            
+                <a href="storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="storage-drivers/">
+            
+                <a href="storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="storage-drivers/inmemory.html">
+            
+                <a href="storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="storage-drivers/oss.html">
+            
+                <a href="storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="storage-drivers/s3.html">
+            
+                <a href="storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="storage-drivers/swift.html">
+            
+                <a href="storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="architecture.html">
+            
+                <a href="architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="compatibility.html">
+            
+                <a href="compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="deploying.html">
+            
+                <a href="deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="deprecated.html">
+            
+                <a href="deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="garbage-collection.html">
+            
+                <a href="garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="glossary.html">
+            
+                <a href="glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="help.html">
+            
+                <a href="help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="insecure.html">
+            
+                <a href="insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Configuring A Registry</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>The Registry configuration is based on a YAML file, detailed below. While it
+comes with sane default values out of the box, you should review it exhaustively
+before moving your systems to production.</p>
+<h2 id="override-specific-configuration-options">Override specific configuration options</h2>
+<p>In a typical setup where you run your Registry from the official image, you can
+specify a configuration variable from the environment by passing <code>-e</code> arguments
+to your <code>docker run</code> stanza or from within a Dockerfile using the <code>ENV</code>
+instruction.</p>
+<p>To override a configuration option, create an environment variable named
+<code>REGISTRY_variable</code> where <code>variable</code> is the name of the configuration option
+and the <code>_</code> (underscore) represents indention levels. For example, you can
+configure the <code>rootdirectory</code> of the <code>filesystem</code> storage backend:</p>
+<pre class="language-"><code class="lang-none">storage:
+  filesystem:
+    rootdirectory: /var/lib/registry
+</code></pre>
+<p>To override this value, set an environment variable like this:</p>
+<pre class="language-"><code class="lang-none">REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/somewhere
+</code></pre>
+<p>This variable overrides the <code>/var/lib/registry</code> value to the <code>/somewhere</code>
+directory.</p>
+<blockquote>
+<p><strong>Note</strong>: Create a base configuration file with environment variables that can
+be configured to tweak individual values. Overriding configuration sections
+with environment variables is not recommended.</p>
+</blockquote>
+<h2 id="overriding-the-entire-configuration-file">Overriding the entire configuration file</h2>
+<p>If the default configuration is not a sound basis for your usage, or if you are
+having issues overriding keys from the environment, you can specify an alternate
+YAML configuration file by mounting it as a volume in the container.</p>
+<p>Typically, create a new configuration file from scratch,named <code>config.yml</code>, then
+specify it in the <code>docker run</code> command:</p>
+<pre class="language-"><code class="lang-bash">$ docker run -d -p <span class="token number">5000</span>:5000 --restart<span class="token operator">=</span>always --name registry <span class="token punctuation">\</span>
+             -v <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>/config.yml:/etc/docker/registry/config.yml <span class="token punctuation">\</span>
+             registry:2
+</code></pre>
+<p>Use this
+<a href="https://github.com/distribution/distribution/blob/master/cmd/registry/config-example.yml" target="_blank">example YAML file</a>
+as a starting point.</p>
+<h2 id="list-of-configuration-options">List of configuration options</h2>
+<p>These are all configuration options for the registry. Some options in the list
+are mutually exclusive. Read the detailed reference information about each
+option before finalizing your configuration.</p>
+<pre class="language-"><code class="lang-none">version: 0.1
+log:
+  accesslog:
+    disabled: true
+  level: debug
+  formatter: text
+  fields:
+    service: registry
+    environment: staging
+  hooks:
+    - type: mail
+      disabled: true
+      levels:
+        - panic
+      options:
+        smtp:
+          addr: mail.example.com:25
+          username: mailuser
+          password: password
+          insecure: true
+        from: sender@example.com
+        to:
+          - errors@example.com
+loglevel: debug # deprecated: use &quot;log&quot;
+storage:
+  filesystem:
+    rootdirectory: /var/lib/registry
+    maxthreads: 100
+  azure:
+    accountname: accountname
+    accountkey: base64encodedaccountkey
+    container: containername
+  gcs:
+    bucket: bucketname
+    keyfile: /path/to/keyfile
+    credentials:
+      type: service_account
+      project_id: project_id_string
+      private_key_id: private_key_id_string
+      private_key: private_key_string
+      client_email: client@example.com
+      client_id: client_id_string
+      auth_uri: http://example.com/auth_uri
+      token_uri: http://example.com/token_uri
+      auth_provider_x509_cert_url: http://example.com/provider_cert_url
+      client_x509_cert_url: http://example.com/client_cert_url
+    rootdirectory: /gcs/object/name/prefix
+    chunksize: 5242880
+  s3:
+    accesskey: awsaccesskey
+    secretkey: awssecretkey
+    region: us-west-1
+    regionendpoint: http://myobjects.local
+    forcepathstyle: true
+    accelerate: false
+    bucket: bucketname
+    encrypt: true
+    keyid: mykeyid
+    secure: true
+    v4auth: true
+    chunksize: 5242880
+    multipartcopychunksize: 33554432
+    multipartcopymaxconcurrency: 100
+    multipartcopythresholdsize: 33554432
+    rootdirectory: /s3/object/name/prefix
+    usedualstack: false
+  swift:
+    username: username
+    password: password
+    authurl: https://storage.myprovider.com/auth/v1.0 or https://storage.myprovider.com/v2.0 or https://storage.myprovider.com/v3/auth
+    tenant: tenantname
+    tenantid: tenantid
+    domain: domain name for Openstack Identity v3 API
+    domainid: domain id for Openstack Identity v3 API
+    insecureskipverify: true
+    region: fr
+    container: containername
+    rootdirectory: /swift/object/name/prefix
+  oss:
+    accesskeyid: accesskeyid
+    accesskeysecret: accesskeysecret
+    region: OSS region name
+    endpoint: optional endpoints
+    internal: optional internal endpoint
+    bucket: OSS bucket
+    encrypt: optional enable server-side encryption
+    encryptionkeyid: optional KMS key id for encryption
+    secure: optional ssl setting
+    chunksize: optional size valye
+    rootdirectory: optional root directory
+  inmemory:  # This driver takes no parameters
+  delete:
+    enabled: false
+  redirect:
+    disable: false
+  cache:
+    blobdescriptor: redis
+    blobdescriptorsize: 10000
+  maintenance:
+    uploadpurging:
+      enabled: true
+      age: 168h
+      interval: 24h
+      dryrun: false
+    readonly:
+      enabled: false
+auth:
+  silly:
+    realm: silly-realm
+    service: silly-service
+  token:
+    autoredirect: true
+    realm: token-realm
+    service: token-service
+    issuer: registry-token-issuer
+    rootcertbundle: /root/certs/bundle
+  htpasswd:
+    realm: basic-realm
+    path: /path/to/htpasswd
+middleware:
+  registry:
+    - name: ARegistryMiddleware
+      options:
+        foo: bar
+  repository:
+    - name: ARepositoryMiddleware
+      options:
+        foo: bar
+  storage:
+    - name: cloudfront
+      options:
+        baseurl: https://my.cloudfronted.domain.com/
+        privatekey: /path/to/pem
+        keypairid: cloudfrontkeypairid
+        duration: 3000s
+        ipfilteredby: awsregion
+        awsregion: us-east-1, use-east-2
+        updatefrequency: 12h
+        iprangesurl: https://ip-ranges.amazonaws.com/ip-ranges.json
+  storage:
+    - name: redirect
+      options:
+        baseurl: https://example.com/
+reporting:
+  bugsnag:
+    apikey: bugsnagapikey
+    releasestage: bugsnagreleasestage
+    endpoint: bugsnagendpoint
+  newrelic:
+    licensekey: newreliclicensekey
+    name: newrelicname
+    verbose: true
+http:
+  addr: localhost:5000
+  prefix: /my/nested/registry/
+  host: https://myregistryaddress.org:5000
+  secret: asecretforlocaldevelopment
+  relativeurls: false
+  draintimeout: 60s
+  tls:
+    certificate: /path/to/x509/public
+    key: /path/to/x509/private
+    clientcas:
+      - /path/to/ca.pem
+      - /path/to/another/ca.pem
+    letsencrypt:
+      cachefile: /path/to/cache-file
+      email: emailused@letsencrypt.com
+      hosts: [myregistryaddress.org]
+  debug:
+    addr: localhost:5001
+    prometheus:
+      enabled: true
+      path: /metrics
+  headers:
+    X-Content-Type-Options: [nosniff]
+  http2:
+    disabled: false
+notifications:
+  events:
+    includereferences: true
+  endpoints:
+    - name: alistener
+      disabled: false
+      url: https://my.listener.com/event
+      headers: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>http.Header</span><span class="token punctuation">&gt;</span></span>
+      timeout: 1s
+      threshold: 10
+      backoff: 1s
+      ignoredmediatypes:
+        - application/octet-stream
+      ignore:
+        mediatypes:
+           - application/octet-stream
+        actions:
+           - pull
+redis:
+  addr: localhost:6379
+  password: asecret
+  db: 0
+  dialtimeout: 10ms
+  readtimeout: 10ms
+  writetimeout: 10ms
+  pool:
+    maxidle: 16
+    maxactive: 64
+    idletimeout: 300s
+  tls:
+    enabled: false
+health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3
+  file:
+    - file: /path/to/checked/file
+      interval: 10s
+  http:
+    - uri: http://server.to.check/must/return/200
+      headers:
+        Authorization: [Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==]
+      statuscode: 200
+      timeout: 3s
+      interval: 10s
+      threshold: 3
+  tcp:
+    - addr: redis-server.domain.com:6379
+      timeout: 3s
+      interval: 10s
+      threshold: 3
+proxy:
+  remoteurl: https://registry-1.docker.io
+  username: [username]
+  password: [password]
+compatibility:
+  schema1:
+    signingkeyfile: /etc/registry/key.json
+    enabled: true
+validation:
+  manifests:
+    urls:
+      allow:
+        - ^https?://([^/]+\.)*example\.com/
+      deny:
+        - ^https?://www\.example\.com/
+</code></pre>
+<p>In some instances a configuration option is <strong>optional</strong> but it contains child
+options marked as <strong>required</strong>. In these cases, you can omit the parent with
+all its children. However, if the parent is included, you must also include all
+the children marked <strong>required</strong>.</p>
+<h2 id="version"><code>version</code></h2>
+<pre class="language-"><code class="lang-none">version: 0.1
+</code></pre>
+<p>The <code>version</code> option is <strong>required</strong>. It specifies the configuration&apos;s version.
+It is expected to remain a top-level field, to allow for a consistent version
+check before parsing the remainder of the configuration file.</p>
+<h2 id="log"><code>log</code></h2>
+<p>The <code>log</code> subsection configures the behavior of the logging system. The logging
+system outputs everything to stderr. You can adjust the granularity and format
+with this configuration section.</p>
+<pre class="language-"><code class="lang-none">log:
+  accesslog:
+    disabled: true
+  level: debug
+  formatter: text
+  fields:
+    service: registry
+    environment: staging
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>level</code></td>
+<td>no</td>
+<td>Sets the sensitivity of logging output. Permitted values are <code>error</code>, <code>warn</code>, <code>info</code>, and <code>debug</code>. The default is <code>info</code>.</td>
+</tr>
+<tr>
+<td><code>formatter</code></td>
+<td>no</td>
+<td>This selects the format of logging output. The format primarily affects how keyed attributes for a log line are encoded. Options are <code>text</code>, <code>json</code>, and <code>logstash</code>. The default is <code>text</code>.</td>
+</tr>
+<tr>
+<td><code>fields</code></td>
+<td>no</td>
+<td>A map of field names to values. These are added to every log line for the context. This is useful for identifying log messages source after being mixed in other systems.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="accesslog"><code>accesslog</code></h3>
+<pre class="language-"><code class="lang-none">accesslog:
+  disabled: true
+</code></pre>
+<p>Within <code>log</code>, <code>accesslog</code> configures the behavior of the access logging
+system. By default, the access logging system outputs to stdout in
+<a href="https://httpd.apache.org/docs/2.4/logs.html#combined" target="_blank">Combined Log Format</a>.
+Access logging can be disabled by setting the boolean flag <code>disabled</code> to <code>true</code>.</p>
+<h2 id="hooks"><code>hooks</code></h2>
+<pre class="language-"><code class="lang-none">hooks:
+  - type: mail
+    levels:
+      - panic
+    options:
+      smtp:
+        addr: smtp.sendhost.com:25
+        username: sendername
+        password: password
+        insecure: true
+      from: name@sendhost.com
+      to:
+        - name@receivehost.com
+</code></pre>
+<p>The <code>hooks</code> subsection configures the logging hooks&apos; behavior. This subsection
+includes a sequence handler which you can use for sending mail, for example.
+Refer to <code>loglevel</code> to configure the level of messages printed.</p>
+<h2 id="loglevel"><code>loglevel</code></h2>
+<blockquote>
+<p><strong>DEPRECATED:</strong> Please use <a href="#log">log</a> instead.</p>
+</blockquote>
+<pre class="language-"><code class="lang-none">loglevel: debug
+</code></pre>
+<p>Permitted values are <code>error</code>, <code>warn</code>, <code>info</code> and <code>debug</code>. The default is
+<code>info</code>.</p>
+<h2 id="storage"><code>storage</code></h2>
+<pre class="language-"><code class="lang-none">storage:
+  filesystem:
+    rootdirectory: /var/lib/registry
+  azure:
+    accountname: accountname
+    accountkey: base64encodedaccountkey
+    container: containername
+  gcs:
+    bucket: bucketname
+    keyfile: /path/to/keyfile
+    credentials:
+      type: service_account
+      project_id: project_id_string
+      private_key_id: private_key_id_string
+      private_key: private_key_string
+      client_email: client@example.com
+      client_id: client_id_string
+      auth_uri: http://example.com/auth_uri
+      token_uri: http://example.com/token_uri
+      auth_provider_x509_cert_url: http://example.com/provider_cert_url
+      client_x509_cert_url: http://example.com/client_cert_url
+    rootdirectory: /gcs/object/name/prefix
+  s3:
+    accesskey: awsaccesskey
+    secretkey: awssecretkey
+    region: us-west-1
+    regionendpoint: http://myobjects.local
+    forcepathstyle: true
+    accelerate: false
+    bucket: bucketname
+    encrypt: true
+    keyid: mykeyid
+    secure: true
+    v4auth: true
+    chunksize: 5242880
+    multipartcopychunksize: 33554432
+    multipartcopymaxconcurrency: 100
+    multipartcopythresholdsize: 33554432
+    rootdirectory: /s3/object/name/prefix
+  swift:
+    username: username
+    password: password
+    authurl: https://storage.myprovider.com/auth/v1.0 or https://storage.myprovider.com/v2.0 or https://storage.myprovider.com/v3/auth
+    tenant: tenantname
+    tenantid: tenantid
+    domain: domain name for Openstack Identity v3 API
+    domainid: domain id for Openstack Identity v3 API
+    insecureskipverify: true
+    region: fr
+    container: containername
+    rootdirectory: /swift/object/name/prefix
+  oss:
+    accesskeyid: accesskeyid
+    accesskeysecret: accesskeysecret
+    region: OSS region name
+    endpoint: optional endpoints
+    internal: optional internal endpoint
+    bucket: OSS bucket
+    encrypt: optional enable server-side encryption
+    encryptionkeyid: optional KMS key id for encryption
+    secure: optional ssl setting
+    chunksize: optional size valye
+    rootdirectory: optional root directory
+  inmemory:
+  delete:
+    enabled: false
+  cache:
+    blobdescriptor: inmemory
+    blobdescriptorsize: 10000
+  maintenance:
+    uploadpurging:
+      enabled: true
+      age: 168h
+      interval: 24h
+      dryrun: false
+    readonly:
+      enabled: false
+  redirect:
+    disable: false
+</code></pre>
+<p>The <code>storage</code> option is <strong>required</strong> and defines which storage backend is in
+use. You must configure exactly one backend. If you configure more, the registry
+returns an error. You can choose any of these backend storage drivers:</p>
+<table>
+<thead>
+<tr>
+<th>Storage driver</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filesystem</code></td>
+<td>Uses the local disk to store registry files. It is ideal for development and may be appropriate for some small-scale production applications. See the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/filesystem.md" target="_blank">driver&apos;s reference documentation</a>.</td>
+</tr>
+<tr>
+<td><code>azure</code></td>
+<td>Uses Microsoft Azure Blob Storage. See the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/azure.md" target="_blank">driver&apos;s reference documentation</a>.</td>
+</tr>
+<tr>
+<td><code>gcs</code></td>
+<td>Uses Google Cloud Storage. See the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/gcs.md" target="_blank">driver&apos;s reference documentation</a>.</td>
+</tr>
+<tr>
+<td><code>s3</code></td>
+<td>Uses Amazon Simple Storage Service (S3) and compatible Storage Services. See the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/s3.md" target="_blank">driver&apos;s reference documentation</a>.</td>
+</tr>
+<tr>
+<td><code>swift</code></td>
+<td>Uses Openstack Swift object storage. See the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/swift.md" target="_blank">driver&apos;s reference documentation</a>.</td>
+</tr>
+<tr>
+<td><code>oss</code></td>
+<td>Uses Aliyun OSS for object storage. See the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/oss.md" target="_blank">driver&apos;s reference documentation</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>For testing only, you can use the <a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/inmemory.md" target="_blank"><code>inmemory</code> storage
+driver</a>.
+If you would like to run a registry from volatile memory, use the
+<a href="https://github.com/docker/docker.github.io/tree/master/registry/storage-drivers/filesystem.md" target="_blank"><code>filesystem</code> driver</a>
+on a ramdisk.</p>
+<p>If you are deploying a registry on Windows, a Windows volume mounted from the
+host is not recommended. Instead, you can use a S3 or Azure backing
+data-store. If you do use a Windows volume, the length of the <code>PATH</code> to
+the mount point must be within the <code>MAX_PATH</code> limits (typically 255 characters),
+or this error will occur:</p>
+<pre class="language-"><code class="lang-none">mkdir /XXX protocol error and your registry will not function properly.
+</code></pre>
+<h3 id="maintenance"><code>maintenance</code></h3>
+<p>Currently, upload purging and read-only mode are the only <code>maintenance</code>
+functions available.</p>
+<h3 id="uploadpurging"><code>uploadpurging</code></h3>
+<p>Upload purging is a background process that periodically removes orphaned files
+from the upload directories of the registry. Upload purging is enabled by
+default. To configure upload directory purging, the following parameters must
+be set.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>yes</td>
+<td>Set to <code>true</code> to enable upload purging. Defaults to <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>age</code></td>
+<td>yes</td>
+<td>Upload directories which are older than this age will be deleted.Defaults to <code>168h</code> (1 week).</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>yes</td>
+<td>The interval between upload directory purging. Defaults to <code>24h</code>.</td>
+</tr>
+<tr>
+<td><code>dryrun</code></td>
+<td>yes</td>
+<td>Set <code>dryrun</code> to <code>true</code> to obtain a summary of what directories will be deleted. Defaults to <code>false</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: <code>age</code> and <code>interval</code> are strings containing a number with optional
+fraction and a unit suffix. Some examples: <code>45m</code>, <code>2h10m</code>, <code>168h</code>.</p>
+</blockquote>
+<h3 id="readonly"><code>readonly</code></h3>
+<p>If the <code>readonly</code> section under <code>maintenance</code> has <code>enabled</code> set to <code>true</code>,
+clients will not be allowed to write to the registry. This mode is useful to
+temporarily prevent writes to the backend storage so a garbage collection pass
+can be run.  Before running garbage collection, the registry should be
+restarted with readonly&apos;s <code>enabled</code> set to true. After the garbage collection
+pass finishes, the registry may be restarted again, this time with <code>readonly</code>
+removed from the configuration (or set to false).</p>
+<h3 id="delete"><code>delete</code></h3>
+<p>Use the <code>delete</code> structure to enable the deletion of image blobs and manifests
+by digest. It defaults to false, but it can be enabled by writing the following
+on the configuration file:</p>
+<pre class="language-"><code class="lang-none">delete:
+  enabled: true
+</code></pre>
+<h3 id="cache"><code>cache</code></h3>
+<p>Use the <code>cache</code> structure to enable caching of data accessed in the storage
+backend. Currently, the only available cache provides fast access to layer
+metadata, which uses the <code>blobdescriptor</code> field if configured.</p>
+<p>You can set <code>blobdescriptor</code> field to <code>redis</code> or <code>inmemory</code>. If set to <code>redis</code>,a
+Redis pool caches layer metadata. If set to <code>inmemory</code>, an in-memory map caches
+layer metadata.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Formerly, <code>blobdescriptor</code> was known as <code>layerinfo</code>. While these
+are equivalent, <code>layerinfo</code> has been deprecated.</p>
+</blockquote>
+<p>If <code>blobdescriptor</code> is set to <code>inmemory</code>, the optional <code>blobdescriptorsize</code>
+parameter sets a limit on the number of descriptors to store in the cache.
+The default value is 10000. If this parameter is set to 0, the cache is allowed
+to grow with no size limit.</p>
+<h3 id="redirect"><code>redirect</code></h3>
+<p>The <code>redirect</code> subsection provides configuration for managing redirects from
+content backends. For backends that support it, redirecting is enabled by
+default. In certain deployment scenarios, you may decide to route all data
+through the Registry, rather than redirecting to the backend. This may be more
+efficient when using a backend that is not co-located or when a registry
+instance is aggressively caching.</p>
+<p>To disable redirects, add a single flag <code>disable</code>, set to <code>true</code>
+under the <code>redirect</code> section:</p>
+<pre class="language-"><code class="lang-none">redirect:
+  disable: true
+</code></pre>
+<h2 id="auth"><code>auth</code></h2>
+<pre class="language-"><code class="lang-none">auth:
+  silly:
+    realm: silly-realm
+    service: silly-service
+  token:
+    realm: token-realm
+    service: token-service
+    issuer: registry-token-issuer
+    rootcertbundle: /root/certs/bundle
+  htpasswd:
+    realm: basic-realm
+    path: /path/to/htpasswd
+</code></pre>
+<p>The <code>auth</code> option is <strong>optional</strong>. Possible auth providers include:</p>
+<ul>
+<li><a href="#silly"><code>silly</code></a></li>
+<li><a href="#token"><code>token</code></a></li>
+<li><a href="#htpasswd"><code>htpasswd</code></a></li>
+<li>[<code>none</code>]</li>
+</ul>
+<p>You can configure only one authentication provider.</p>
+<h3 id="silly"><code>silly</code></h3>
+<p>The <code>silly</code> authentication provider is only appropriate for development. It simply checks
+for the existence of the <code>Authorization</code> header in the HTTP request. It does not
+check the header&apos;s value. If the header does not exist, the <code>silly</code> auth
+responds with a challenge response, echoing back the realm, service, and scope
+for which access was denied.</p>
+<p>The following values are used to configure the response:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>realm</code></td>
+<td>yes</td>
+<td>The realm in which the registry server authenticates.</td>
+</tr>
+<tr>
+<td><code>service</code></td>
+<td>yes</td>
+<td>The service being authenticated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="token"><code>token</code></h3>
+<p>Token-based authentication allows you to decouple the authentication system from
+the registry. It is an established authentication paradigm with a high degree of
+security.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>realm</code></td>
+<td>yes</td>
+<td>The realm in which the registry server authenticates.</td>
+</tr>
+<tr>
+<td><code>service</code></td>
+<td>yes</td>
+<td>The service being authenticated.</td>
+</tr>
+<tr>
+<td><code>issuer</code></td>
+<td>yes</td>
+<td>The name of the token issuer. The issuer inserts this into the token so it must match the value configured for the issuer.</td>
+</tr>
+<tr>
+<td><code>rootcertbundle</code></td>
+<td>yes</td>
+<td>The absolute path to the root certificate bundle. This bundle contains the public part of the certificates used to sign authentication tokens.</td>
+</tr>
+<tr>
+<td><code>autoredirect</code></td>
+<td>no</td>
+<td>When set to <code>true</code>, <code>realm</code> will automatically be set using the Host header of the request as the domain and a path of <code>/auth/token/</code></td>
+</tr>
+</tbody>
+</table>
+<p>For more information about Token based authentication configuration, see the
+<a href="spec/auth/token.html">specification</a>.</p>
+<h3 id="htpasswd"><code>htpasswd</code></h3>
+<p>The <em>htpasswd</em> authentication backed allows you to configure basic
+authentication using an
+<a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html" target="_blank">Apache htpasswd file</a>.
+The only supported password format is
+<a href="http://en.wikipedia.org/wiki/Bcrypt" target="_blank"><code>bcrypt</code></a>. Entries with other hash types
+are ignored. The <code>htpasswd</code> file is loaded once, at startup. If the file is
+invalid, the registry will display an error and will not start.</p>
+<blockquote>
+<p><strong>Warning</strong>: If the <code>htpasswd</code> file is missing, the file will be created and provisioned with a default user and automatically generated password.
+The password will be printed to stdout.</p>
+<p><strong>Warning</strong>: Only use the <code>htpasswd</code> authentication scheme with TLS
+configured, since basic authentication sends passwords as part of the HTTP
+header.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>realm</code></td>
+<td>yes</td>
+<td>The realm in which the registry server authenticates.</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>yes</td>
+<td>The path to the <code>htpasswd</code> file to load at startup.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="middleware"><code>middleware</code></h2>
+<p>The <code>middleware</code> structure is <strong>optional</strong>. Use this option to inject middleware at
+named hook points. Each middleware must implement the same interface as the
+object it is wrapping. For instance, a registry middleware must implement the
+<code>distribution.Namespace</code> interface, while a repository middleware must implement
+<code>distribution.Repository</code>, and a storage middleware must implement
+<code>driver.StorageDriver</code>.</p>
+<p>This is an example configuration of the <code>cloudfront</code>  middleware, a storage
+middleware:</p>
+<pre class="language-"><code class="lang-none">middleware:
+  registry:
+    - name: ARegistryMiddleware
+      options:
+        foo: bar
+  repository:
+    - name: ARepositoryMiddleware
+      options:
+        foo: bar
+  storage:
+    - name: cloudfront
+      options:
+        baseurl: https://my.cloudfronted.domain.com/
+        privatekey: /path/to/pem
+        keypairid: cloudfrontkeypairid
+        duration: 3000s
+        ipfilteredby: awsregion
+        awsregion: us-east-1, use-east-2
+        updatefrequency: 12h
+        iprangesurl: https://ip-ranges.amazonaws.com/ip-ranges.json
+</code></pre>
+<p>Each middleware entry has <code>name</code> and <code>options</code> entries. The <code>name</code> must
+correspond to the name under which the middleware registers itself. The
+<code>options</code> field is a map that details custom configuration required to
+initialize the middleware. It is treated as a <code>map[string]interface{}</code>. As such,
+it supports any interesting structures desired, leaving it up to the middleware
+initialization function to best determine how to handle the specific
+interpretation of the options.</p>
+<h3 id="cloudfront"><code>cloudfront</code></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>baseurl</code></td>
+<td>yes</td>
+<td>The <code>SCHEME://HOST[/PATH]</code> at which Cloudfront is served.</td>
+</tr>
+<tr>
+<td><code>privatekey</code></td>
+<td>yes</td>
+<td>The private key for Cloudfront, provided by AWS.</td>
+</tr>
+<tr>
+<td><code>keypairid</code></td>
+<td>yes</td>
+<td>The key pair ID provided by AWS.</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>no</td>
+<td>An integer and unit for the duration of the Cloudfront session. Valid time units are <code>ns</code>, <code>us</code> (or <code>&#xB5;s</code>), <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. For example, <code>3000s</code> is valid, but <code>3000 s</code> is not. If you do not specify a <code>duration</code> or you specify an integer without a time unit, the duration defaults to <code>20m</code> (20 minutes).</td>
+</tr>
+<tr>
+<td><code>ipfilteredby</code></td>
+<td>no</td>
+<td>A string with the following value <code>none</code>, <code>aws</code> or <code>awsregion</code>.</td>
+</tr>
+<tr>
+<td><code>awsregion</code></td>
+<td>no</td>
+<td>A comma separated string of AWS regions, only available when <code>ipfilteredby</code> is <code>awsregion</code>. For example, <code>us-east-1, us-west-2</code></td>
+</tr>
+<tr>
+<td><code>updatefrequency</code></td>
+<td>no</td>
+<td>The frequency to update AWS IP regions, default: <code>12h</code></td>
+</tr>
+<tr>
+<td><code>iprangesurl</code></td>
+<td>no</td>
+<td>The URL contains the AWS IP ranges information, default: <code>https://ip-ranges.amazonaws.com/ip-ranges.json</code></td>
+</tr>
+</tbody>
+</table>
+<p>Value of <code>ipfilteredby</code> can be:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>default, do not filter by IP</td>
+</tr>
+<tr>
+<td><code>aws</code></td>
+<td>IP from AWS goes to S3 directly</td>
+</tr>
+<tr>
+<td><code>awsregion</code></td>
+<td>IP from certain AWS regions goes to S3 directly, use together with <code>awsregion</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alicdn"><code>alicdn</code></h3>
+<p><code>alicdn</code> storage middleware allows the registry to serve layers via a content delivery network provided by Alibaba Cloud. Alicdn requires the OSS storage driver.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>baseurl</code></td>
+<td>yes</td>
+<td>The <code>SCHEME://HOST</code> at which Alicdn is served.</td>
+</tr>
+<tr>
+<td><code>authtype</code></td>
+<td>yes</td>
+<td>The URL authentication type for Alicdn, which should be <code>a</code>, <code>b</code> or <code>c</code>. See the <a href="https://www.alibabacloud.com/help/doc-detail/85117.htm" target="_blank">Authentication configuration</a>.</td>
+</tr>
+<tr>
+<td><code>privatekey</code></td>
+<td>yes</td>
+<td>The URL authentication key for Alicdn.</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>no</td>
+<td>An integer and unit for the duration of the Alicdn session. Valid time units are <code>ns</code>, <code>us</code> (or <code>&#xB5;s</code>), <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="redirect"><code>redirect</code></h3>
+<p>You can use the <code>redirect</code> storage middleware to specify a custom URL to a
+location of a proxy for the layer stored by the S3 storage driver.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>baseurl</code></td>
+<td>yes</td>
+<td><code>SCHEME://HOST</code> at which layers are served. Can also contain port. For example, <code>https://example.com:5443</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reporting"><code>reporting</code></h2>
+<pre class="language-"><code>reporting:
+  bugsnag:
+    apikey: bugsnagapikey
+    releasestage: bugsnagreleasestage
+    endpoint: bugsnagendpoint
+  newrelic:
+    licensekey: newreliclicensekey
+    name: newrelicname
+    verbose: true
+</code></pre><p>The <code>reporting</code> option is <strong>optional</strong> and configures error and metrics
+reporting tools. At the moment only two services are supported:</p>
+<ul>
+<li><a href="#bugsnag">Bugsnag</a></li>
+<li><a href="#new-relic">New Relic</a></li>
+</ul>
+<p>A valid configuration may contain both.</p>
+<h3 id="bugsnag"><code>bugsnag</code></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apikey</code></td>
+<td>yes</td>
+<td>The API Key provided by Bugsnag.</td>
+</tr>
+<tr>
+<td><code>releasestage</code></td>
+<td>no</td>
+<td>Tracks where the registry is deployed, using a string like <code>production</code>, <code>staging</code>, or <code>development</code>.</td>
+</tr>
+<tr>
+<td><code>endpoint</code></td>
+<td>no</td>
+<td>The enterprise Bugsnag endpoint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="newrelic"><code>newrelic</code></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>licensekey</code></td>
+<td>yes</td>
+<td>License key provided by New Relic.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>no</td>
+<td>New Relic application name.</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>no</td>
+<td>Set to <code>true</code> to enable New Relic debugging output on <code>stdout</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="http"><code>http</code></h2>
+<pre class="language-"><code class="lang-none">http:
+  addr: localhost:5000
+  net: tcp
+  prefix: /my/nested/registry/
+  host: https://myregistryaddress.org:5000
+  secret: asecretforlocaldevelopment
+  relativeurls: false
+  draintimeout: 60s
+  tls:
+    certificate: /path/to/x509/public
+    key: /path/to/x509/private
+    clientcas:
+      - /path/to/ca.pem
+      - /path/to/another/ca.pem
+    minimumtls: tls1.2
+    ciphersuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+    letsencrypt:
+      cachefile: /path/to/cache-file
+      email: emailused@letsencrypt.com
+      hosts: [myregistryaddress.org]
+  debug:
+    addr: localhost:5001
+  headers:
+    X-Content-Type-Options: [nosniff]
+  http2:
+    disabled: false
+</code></pre>
+<p>The <code>http</code> option details the configuration for the HTTP server that hosts the
+registry.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addr</code></td>
+<td>yes</td>
+<td>The address for which the server should accept connections. The form depends on a network type (see the <code>net</code> option). Use <code>HOST:PORT</code> for TCP and <code>FILE</code> for a UNIX socket.</td>
+</tr>
+<tr>
+<td><code>net</code></td>
+<td>no</td>
+<td>The network used to create a listening socket. Known networks are <code>unix</code> and <code>tcp</code>.</td>
+</tr>
+<tr>
+<td><code>prefix</code></td>
+<td>no</td>
+<td>If the server does not run at the root path, set this to the value of the prefix. The root path is the section before <code>v2</code>. It requires both preceding and trailing slashes, such as in the example <code>/path/</code>.</td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td>no</td>
+<td>A fully-qualified URL for an externally-reachable address for the registry. If present, it is used when creating generated URLs. Otherwise, these URLs are derived from client requests.</td>
+</tr>
+<tr>
+<td><code>secret</code></td>
+<td>no</td>
+<td>A random piece of data used to sign state that may be stored with the client to protect against tampering. For production environments you should generate a random piece of data using a cryptographically secure random generator. If you omit the secret, the registry will automatically generate a secret when it starts. <strong>If you are building a cluster of registries behind a load balancer, you MUST ensure the secret is the same for all registries.</strong></td>
+</tr>
+<tr>
+<td><code>relativeurls</code></td>
+<td>no</td>
+<td>If <code>true</code>,  the registry returns relative URLs in Location headers. The client is responsible for resolving the correct URL. <strong>This option is not compatible with Docker 1.7 and earlier.</strong></td>
+</tr>
+<tr>
+<td><code>draintimeout</code></td>
+<td>no</td>
+<td>Amount of time to wait for HTTP connections to drain before shutting down after registry receives SIGTERM signal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tls"><code>tls</code></h3>
+<p>The <code>tls</code> structure within <code>http</code> is <strong>optional</strong>. Use this to configure TLS
+for the server. If you already have a web server running on
+the same host as the registry, you may prefer to configure TLS on that web server
+and proxy connections to the registry server.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>certificate</code></td>
+<td>yes</td>
+<td>Absolute path to the x509 certificate file.</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td>yes</td>
+<td>Absolute path to the x509 private key file.</td>
+</tr>
+<tr>
+<td><code>clientcas</code></td>
+<td>no</td>
+<td>An array of absolute paths to x509 CA files.</td>
+</tr>
+<tr>
+<td><code>minimumtls</code></td>
+<td>no</td>
+<td>Minimum TLS version allowed (tls1.0, tls1.1, tls1.2, tls1.3). Defaults to tls1.2</td>
+</tr>
+<tr>
+<td><code>ciphersuites</code></td>
+<td>no</td>
+<td>Cipher suites allowed. Please see below for allowed values and default.</td>
+</tr>
+</tbody>
+</table>
+<p>Available cipher suites:</p>
+<ul>
+<li>TLS_RSA_WITH_RC4_128_SHA</li>
+<li>TLS_RSA_WITH_3DES_EDE_CBC_SHA</li>
+<li>TLS_RSA_WITH_AES_128_CBC_SHA</li>
+<li>TLS_RSA_WITH_AES_256_CBC_SHA</li>
+<li>TLS_RSA_WITH_AES_128_CBC_SHA256</li>
+<li>TLS_RSA_WITH_AES_128_GCM_SHA256</li>
+<li>TLS_RSA_WITH_AES_256_GCM_SHA384</li>
+<li>TLS_ECDHE_ECDSA_WITH_RC4_128_SHA</li>
+<li>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</li>
+<li>TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</li>
+<li>TLS_ECDHE_RSA_WITH_RC4_128_SHA</li>
+<li>TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</li>
+<li>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</li>
+<li>TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</li>
+<li>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</li>
+<li>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</li>
+<li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
+<li>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</li>
+<li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
+<li>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</li>
+<li>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</li>
+<li>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</li>
+<li>TLS_AES_128_GCM_SHA256</li>
+<li>TLS_AES_256_GCM_SHA384</li>
+<li>TLS_CHACHA20_POLY1305_SHA256</li>
+</ul>
+<p>Default cipher suites:</p>
+<ul>
+<li>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</li>
+<li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
+<li>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</li>
+<li>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</li>
+<li>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</li>
+<li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
+<li>TLS_AES_128_GCM_SHA256</li>
+<li>TLS_CHACHA20_POLY1305_SHA256</li>
+<li>TLS_AES_256_GCM_SHA384</li>
+</ul>
+<h3 id="letsencrypt"><code>letsencrypt</code></h3>
+<p>The <code>letsencrypt</code> structure within <code>tls</code> is <strong>optional</strong>. Use this to configure
+TLS certificates provided by
+<a href="https://letsencrypt.org/how-it-works/" target="_blank">Let&apos;s Encrypt</a>.</p>
+<blockquote>
+<p><strong>NOTE</strong>: When using Let&apos;s Encrypt, ensure that the outward-facing address is
+accessible on port <code>443</code>. The registry defaults to listening on port <code>5000</code>.
+If you run the registry as a container, consider adding the flag <code>-p 443:5000</code>
+to the <code>docker run</code> command or using a similar setting in a cloud
+configuration. You should also set the <code>hosts</code> option to the list of hostnames
+that are valid for this registry to avoid trying to get certificates for random
+hostnames due to malicious clients connecting with bogus SNI hostnames. Please
+ensure that you have the <code>ca-certificates</code> package installed in order to verify
+letsencrypt certificates.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cachefile</code></td>
+<td>yes</td>
+<td>Absolute path to a file where the Let&apos;s Encrypt agent can cache data.</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>yes</td>
+<td>The email address used to register with Let&apos;s Encrypt.</td>
+</tr>
+<tr>
+<td><code>hosts</code></td>
+<td>no</td>
+<td>The hostnames allowed for Let&apos;s Encrypt certificates.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debug"><code>debug</code></h3>
+<p>The <code>debug</code> option is <strong>optional</strong> . Use it to configure a debug server that
+can be helpful in diagnosing problems. The debug endpoint can be used for
+monitoring registry metrics and health, as well as profiling. Sensitive
+information may be available via the debug endpoint. Please be certain that
+access to the debug endpoint is locked down in a production environment.</p>
+<p>The <code>debug</code> section takes a single required <code>addr</code> parameter, which specifies
+the <code>HOST:PORT</code> on which the debug server should accept connections.</p>
+<p>If the registry is configured as a pull-through cache, the <code>debug</code> server can be used
+to access proxy statistics. These statistics are exposed at <code>/debug/vars</code> in JSON format.</p>
+<h2 id="prometheus"><code>prometheus</code></h2>
+<p>The <code>prometheus</code> option defines whether the prometheus metrics are enabled, as well
+as the path to access the metrics.</p>
+<blockquote>
+<p><strong>NOTE</strong>: The prometheus metrics do <strong>not</strong> cover pull-through cache statistics.
+Proxy statistics are exposed via <code>expvar</code> only.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>no</td>
+<td>Set <code>true</code> to enable the prometheus server</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>no</td>
+<td>The path to access the metrics, <code>/metrics</code> by default</td>
+</tr>
+</tbody>
+</table>
+<p>The url to access the metrics is <code>HOST:PORT/path</code>, where <code>HOST:PORT</code> is defined
+in <code>addr</code> under <code>debug</code>.</p>
+<h3 id="headers"><code>headers</code></h3>
+<p>The <code>headers</code> option is <strong>optional</strong> . Use it to specify headers that the HTTP
+server should include in responses. This can be used for security headers such
+as <code>Strict-Transport-Security</code>.</p>
+<p>The <code>headers</code> option should contain an option for each header to include, where
+the parameter name is the header&apos;s name, and the parameter value a list of the
+header&apos;s payload values.</p>
+<p>Including <code>X-Content-Type-Options: [nosniff]</code> is recommended, so that browsers
+will not interpret content as HTML if they are directed to load a page from the
+registry. This header is included in the example configuration file.</p>
+<h3 id="http2"><code>http2</code></h3>
+<p>The <code>http2</code> structure within <code>http</code> is <strong>optional</strong>. Use this to control http2
+settings for the registry.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disabled</code></td>
+<td>no</td>
+<td>If <code>true</code>, then <code>http2</code> support is disabled.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notifications"><code>notifications</code></h2>
+<pre class="language-"><code class="lang-none">notifications:
+  events:
+    includereferences: true
+  endpoints:
+    - name: alistener
+      disabled: false
+      url: https://my.listener.com/event
+      headers: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>http.Header</span><span class="token punctuation">&gt;</span></span>
+      timeout: 1s
+      threshold: 10
+      backoff: 1s
+      ignoredmediatypes:
+        - application/octet-stream
+      ignore:
+        mediatypes:
+           - application/octet-stream
+        actions:
+           - pull
+</code></pre>
+<p>The notifications option is <strong>optional</strong> and currently may contain a single
+option, <code>endpoints</code>.</p>
+<h3 id="endpoints"><code>endpoints</code></h3>
+<p>The <code>endpoints</code> structure contains a list of named services (URLs) that can
+accept event notifications.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>yes</td>
+<td>A human-readable name for the service.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>no</td>
+<td>If <code>true</code>, notifications are disabled for the service.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>yes</td>
+<td>The URL to which events should be published.</td>
+</tr>
+<tr>
+<td><code>headers</code></td>
+<td>yes</td>
+<td>A list of static headers to add to each request. Each header&apos;s name is a key beneath <code>headers</code>, and each value is a list of payloads for that header name. Values must always be lists.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>yes</td>
+<td>A value for the HTTP timeout. A positive integer and an optional suffix indicating the unit of time, which may be <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. If you omit the unit of time, <code>ns</code> is used.</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>yes</td>
+<td>An integer specifying how long to wait before backing off a failure.</td>
+</tr>
+<tr>
+<td><code>backoff</code></td>
+<td>yes</td>
+<td>How long the system backs off before retrying after a failure. A positive integer and an optional suffix indicating the unit of time, which may be <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. If you omit the unit of time, <code>ns</code> is used.</td>
+</tr>
+<tr>
+<td><code>ignoredmediatypes</code></td>
+<td>no</td>
+<td>A list of target media types to ignore. Events with these target media types are not published to the endpoint.</td>
+</tr>
+<tr>
+<td><code>ignore</code></td>
+<td>no</td>
+<td>Events with these mediatypes or actions are not published to the endpoint.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ignore"><code>ignore</code></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mediatypes</code></td>
+<td>no</td>
+<td>A list of target media types to ignore. Events with these target media types are not published to the endpoint.</td>
+</tr>
+<tr>
+<td><code>actions</code></td>
+<td>no</td>
+<td>A list of actions to ignore. Events with these actions are not published to the endpoint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="events"><code>events</code></h3>
+<p>The <code>events</code> structure configures the information provided in event notifications.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>includereferences</code></td>
+<td>no</td>
+<td>If <code>true</code>, include reference information in manifest events.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="redis"><code>redis</code></h2>
+<pre class="language-"><code class="lang-none">redis:
+  addr: localhost:6379
+  password: asecret
+  db: 0
+  dialtimeout: 10ms
+  readtimeout: 10ms
+  writetimeout: 10ms
+  pool:
+    maxidle: 16
+    maxactive: 64
+    idletimeout: 300s
+  tls:
+    enabled: false
+</code></pre>
+<p>Declare parameters for constructing the <code>redis</code> connections. Registry instances
+may use the Redis instance for several applications. Currently, it caches
+information about immutable blobs. Most of the <code>redis</code> options control
+how the registry connects to the <code>redis</code> instance. You can control the pool&apos;s
+behavior with the <a href="#pool">pool</a> subsection. Additionally, you can control
+TLS connection settings with the <a href="#tls">tls</a> subsection (in-transit encryption).</p>
+<p>You should configure Redis with the <strong>allkeys-lru</strong> eviction policy, because the
+registry does not set an expiration value on keys.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addr</code></td>
+<td>yes</td>
+<td>The address (host and port) of the Redis instance.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>no</td>
+<td>A password used to authenticate to the Redis instance.</td>
+</tr>
+<tr>
+<td><code>db</code></td>
+<td>no</td>
+<td>The name of the database to use for each connection.</td>
+</tr>
+<tr>
+<td><code>dialtimeout</code></td>
+<td>no</td>
+<td>The timeout for connecting to the Redis instance.</td>
+</tr>
+<tr>
+<td><code>readtimeout</code></td>
+<td>no</td>
+<td>The timeout for reading from the Redis instance.</td>
+</tr>
+<tr>
+<td><code>writetimeout</code></td>
+<td>no</td>
+<td>The timeout for writing to the Redis instance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pool"><code>pool</code></h3>
+<pre class="language-"><code class="lang-none">pool:
+  maxidle: 16
+  maxactive: 64
+  idletimeout: 300s
+</code></pre>
+<p>Use these settings to configure the behavior of the Redis connection pool.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maxidle</code></td>
+<td>no</td>
+<td>The maximum number of idle connections in the pool.</td>
+</tr>
+<tr>
+<td><code>maxactive</code></td>
+<td>no</td>
+<td>The maximum number of connections which can be open before blocking a connection request.</td>
+</tr>
+<tr>
+<td><code>idletimeout</code></td>
+<td>no</td>
+<td>How long to wait before closing inactive connections.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tls"><code>tls</code></h3>
+<pre class="language-"><code class="lang-none">tls:
+  enabled: false
+</code></pre>
+<p>Use these settings to configure Redis TLS.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>no</td>
+<td>Whether or not to use TLS in-transit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="health"><code>health</code></h2>
+<pre class="language-"><code class="lang-none">health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3
+  file:
+    - file: /path/to/checked/file
+      interval: 10s
+  http:
+    - uri: http://server.to.check/must/return/200
+      headers:
+        Authorization: [Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==]
+      statuscode: 200
+      timeout: 3s
+      interval: 10s
+      threshold: 3
+  tcp:
+    - addr: redis-server.domain.com:6379
+      timeout: 3s
+      interval: 10s
+      threshold: 3
+</code></pre>
+<p>The health option is <strong>optional</strong>, and contains preferences for a periodic
+health check on the storage driver&apos;s backend storage, as well as optional
+periodic checks on local files, HTTP URIs, and/or TCP servers. The results of
+the health checks are available at the <code>/debug/health</code> endpoint on the debug
+HTTP server if the debug HTTP server is enabled (see http section).</p>
+<h3 id="storagedriver"><code>storagedriver</code></h3>
+<p>The <code>storagedriver</code> structure contains options for a health check on the
+configured storage driver&apos;s backend storage. The health check is only active
+when <code>enabled</code> is set to <code>true</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>yes</td>
+<td>Set to <code>true</code> to enable storage driver health checks or <code>false</code> to disable them.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>no</td>
+<td>How long to wait between repetitions of the storage driver health check. A positive integer and an optional suffix indicating the unit of time. The suffix is one of <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. Defaults to <code>10s</code> if the value is omitted. If you specify a value but omit the suffix, the value is interpreted as a number of nanoseconds.</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>no</td>
+<td>A positive integer which represents the number of times the check must fail before the state is marked as unhealthy. If not specified, a single failure marks the state as unhealthy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file"><code>file</code></h3>
+<p>The <code>file</code> structure includes a list of paths to be periodically checked for the\
+existence of a file. If a file exists at the given path, the health check will
+fail. You can use this mechanism to bring a registry out of rotation by creating
+a file.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file</code></td>
+<td>yes</td>
+<td>The path to check for existence of a file.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>no</td>
+<td>How long to wait before repeating the check. A positive integer and an optional suffix indicating the unit of time. The suffix is one of <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. Defaults to <code>10s</code> if the value is omitted. If you specify a value but omit the suffix, the value is interpreted as a number of nanoseconds.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http"><code>http</code></h3>
+<p>The <code>http</code> structure includes a list of HTTP URIs to periodically check with
+<code>HEAD</code> requests. If a <code>HEAD</code> request does not complete or returns an unexpected
+status code, the health check will fail.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uri</code></td>
+<td>yes</td>
+<td>The URI to check.</td>
+</tr>
+<tr>
+<td><code>headers</code></td>
+<td>no</td>
+<td>Static headers to add to each request. Each header&apos;s name is a key beneath <code>headers</code>, and each value is a list of payloads for that header name. Values must always be lists.</td>
+</tr>
+<tr>
+<td><code>statuscode</code></td>
+<td>no</td>
+<td>The expected status code from the HTTP URI. Defaults to <code>200</code>.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>no</td>
+<td>How long to wait before timing out the HTTP request. A positive integer and an optional suffix indicating the unit of time. The suffix is one of <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. If you specify a value but omit the suffix, the value is interpreted as a number of nanoseconds.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>no</td>
+<td>How long to wait before repeating the check. A positive integer and an optional suffix indicating the unit of time. The suffix is one of <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. Defaults to <code>10s</code> if the value is omitted. If you specify a value but omit the suffix, the value is interpreted as a number of nanoseconds.</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>no</td>
+<td>The number of times the check must fail before the state is marked as unhealthy. If this field is not specified, a single failure marks the state as unhealthy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcp"><code>tcp</code></h3>
+<p>The <code>tcp</code> structure includes a list of TCP addresses to periodically check using
+TCP connection attempts. Addresses must include port numbers. If a connection
+attempt fails, the health check will fail.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addr</code></td>
+<td>yes</td>
+<td>The TCP address and port to connect to.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>no</td>
+<td>How long to wait before timing out the TCP connection. A positive integer and an optional suffix indicating the unit of time. The suffix is one of <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. If you specify a value but omit the suffix, the value is interpreted as a number of nanoseconds.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>no</td>
+<td>How long to wait between repetitions of the check. A positive integer and an optional suffix indicating the unit of time. The suffix is one of <code>ns</code>, <code>us</code>, <code>ms</code>, <code>s</code>, <code>m</code>, or <code>h</code>. Defaults to <code>10s</code> if the value is omitted. If you specify a value but omit the suffix, the value is interpreted as a number of nanoseconds.</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>no</td>
+<td>The number of times the check must fail before the state is marked as unhealthy. If this field is not specified, a single failure marks the state as unhealthy.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="proxy"><code>proxy</code></h2>
+<pre class="language-"><code>proxy:
+  remoteurl: https://registry-1.docker.io
+  username: [username]
+  password: [password]
+</code></pre><p>The <code>proxy</code> structure allows a registry to be configured as a pull-through cache
+to Docker Hub.  See
+<a href="https://github.com/docker/docker.github.io/tree/master/registry/recipes/mirror.md" target="_blank">mirror</a>
+for more information. Pushing to a registry configured as a pull-through cache
+is unsupported.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>remoteurl</code></td>
+<td>yes</td>
+<td>The URL for the repository on Docker Hub.</td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td>no</td>
+<td>The username registered with Docker Hub which has access to the repository.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>no</td>
+<td>The password used to authenticate to Docker Hub using the username specified in <code>username</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>To enable pulling private repositories (e.g. <code>batman/robin</code>) specify the
+username (such as <code>batman</code>) and the password for that username.</p>
+<blockquote>
+<p><strong>Note</strong>: These private repositories are stored in the proxy cache&apos;s storage.
+Take appropriate measures to protect access to the proxy cache.</p>
+</blockquote>
+<h2 id="compatibility"><code>compatibility</code></h2>
+<pre class="language-"><code class="lang-none">compatibility:
+  schema1:
+    signingkeyfile: /etc/registry/key.json
+    enabled: true
+</code></pre>
+<p>Use the <code>compatibility</code> structure to configure handling of older and deprecated
+features. Each subsection defines such a feature with configurable behavior.</p>
+<h3 id="schema1"><code>schema1</code></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>signingkeyfile</code></td>
+<td>no</td>
+<td>The signing private key used to add signatures to <code>schema1</code> manifests. If no signing key is provided, a new ECDSA key is generated when the registry starts.</td>
+</tr>
+<tr>
+<td><code>enabled</code></td>
+<td>no</td>
+<td>If this is not set to true, <code>schema1</code> manifests cannot be pushed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validation"><code>validation</code></h2>
+<pre class="language-"><code class="lang-none">validation:
+  manifests:
+    urls:
+      allow:
+        - ^https?://([^/]+\.)*example\.com/
+      deny:
+        - ^https?://www\.example\.com/
+</code></pre>
+<h3 id="disabled"><code>disabled</code></h3>
+<p>The <code>disabled</code> flag disables the other options in the <code>validation</code>
+section. They are enabled by default. This option deprecates the <code>enabled</code> flag.</p>
+<h3 id="manifests"><code>manifests</code></h3>
+<p>Use the <code>manifests</code> subsection to configure validation of manifests. If
+<code>disabled</code> is <code>false</code>, the validation allows nothing.</p>
+<h4 id="urls"><code>urls</code></h4>
+<p>The <code>allow</code> and <code>deny</code> options are each a list of
+<a href="https://pkg.go.dev/regexp/syntax" target="_blank">regular expressions</a> that restrict the URLs in
+pushed manifests.</p>
+<p>If <code>allow</code> is unset, pushing a manifest containing URLs fails.</p>
+<p>If <code>allow</code> is set, pushing a manifest succeeds only if all URLs match
+one of the <code>allow</code> regular expressions <strong>and</strong> one of the following holds:</p>
+<ol>
+<li><code>deny</code> is unset.</li>
+<li><code>deny</code> is set but no URLs within the manifest match any of the <code>deny</code> regular
+expressions.</li>
+</ol>
+<h2 id="example-development-configuration">Example: Development configuration</h2>
+<p>You can use this simple example for local development:</p>
+<pre class="language-"><code class="lang-none">version: 0.1
+log:
+  level: debug
+storage:
+    filesystem:
+        rootdirectory: /var/lib/registry
+http:
+    addr: localhost:5000
+    secret: asecretforlocaldevelopment
+    debug:
+        addr: localhost:5001
+</code></pre>
+<p>This example configures the registry instance to run on port <code>5000</code>, binding to
+<code>localhost</code>, with the <code>debug</code> server enabled. Registry data is stored in the
+<code>/var/lib/registry</code> directory. Logging is set to <code>debug</code> mode, which is the most
+verbose.</p>
+<p>See
+<a href="https://github.com/distribution/distribution/blob/master/cmd/registry/config-example.yml" target="_blank">config-example.yml</a>
+for another simple configuration. Both examples are generally useful for local
+development.</p>
+<h2 id="example-middleware-configuration">Example: Middleware configuration</h2>
+<p>This example configures <a href="http://aws.amazon.com/cloudfront/" target="_blank">Amazon Cloudfront</a>
+as the storage middleware in a registry. Middleware allows the registry to serve
+layers via a content delivery network (CDN). This reduces requests to the
+storage layer.</p>
+<p>Cloudfront requires the S3 storage driver.</p>
+<p>This is the configuration expressed in YAML:</p>
+<pre class="language-"><code class="lang-none">middleware:
+  storage:
+  - name: cloudfront
+    disabled: false
+    options:
+      baseurl: http://d111111abcdef8.cloudfront.net
+      privatekey: /path/to/asecret.pem
+      keypairid: asecret
+      duration: 60s
+</code></pre>
+<p>See the configuration reference for <a href="#cloudfront">Cloudfront</a> for more
+information about configuration options.</p>
+<blockquote>
+<p><strong>Note</strong>: Cloudfront keys exist separately from other AWS keys.  See
+<a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html" target="_blank">the documentation on AWS credentials</a>
+for more information.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="compatibility.html" class="navigation navigation-prev " aria-label="Previous page: Registry Compatibility">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="deploying.html" class="navigation navigation-next " aria-label="Next page: Deploy A Registry Server">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configuring A Registry","description":"Explains how to configure a registry","keywords":"registry, on-prem, images, tags, repository, distribution, configuration","level":"1.6","depth":1,"next":{"title":"Deploy A Registry Server","level":"1.7","depth":1,"path":"deploying.md","ref":"deploying.md","articles":[]},"previous":{"title":"Registry Compatibility","level":"1.5","depth":1,"path":"compatibility.md","ref":"compatibility.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"configuration.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

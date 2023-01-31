@@ -1,0 +1,919 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Token Scope Documentation · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Describes the scope and access fields used for registry authorization tokens">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="token.html" />
+    
+    
+    <link rel="prev" href="oauth.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../recipes/apache.html">
+            
+                <a href="../../recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../recipes/">
+            
+                <a href="../../recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../recipes/mirror.html">
+            
+                <a href="../../recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../recipes/nginx.html">
+            
+                <a href="../../recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../../recipes/osx-setup-guide.html">
+            
+                <a href="../../recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="jwt.html">
+            
+                <a href="jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.4" data-path="scope.html">
+            
+                <a href="scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="token.html">
+            
+                <a href="token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../api.html">
+            
+                <a href="../api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../deprecated-schema-v1.html">
+            
+                <a href="../deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../implementations.html">
+            
+                <a href="../implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../json.html">
+            
+                <a href="../json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../manifest-v2-1.html">
+            
+                <a href="../manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../manifest-v2-2.html">
+            
+                <a href="../manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../menu.html">
+            
+                <a href="../menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../storage-drivers/azure.html">
+            
+                <a href="../../storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../storage-drivers/filesystem.html">
+            
+                <a href="../../storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../storage-drivers/gcs.html">
+            
+                <a href="../../storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../storage-drivers/">
+            
+                <a href="../../storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../storage-drivers/inmemory.html">
+            
+                <a href="../../storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../storage-drivers/oss.html">
+            
+                <a href="../../storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../storage-drivers/s3.html">
+            
+                <a href="../../storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../storage-drivers/swift.html">
+            
+                <a href="../../storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../architecture.html">
+            
+                <a href="../../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../compatibility.html">
+            
+                <a href="../../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../configuration.html">
+            
+                <a href="../../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../deploying.html">
+            
+                <a href="../../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../deprecated.html">
+            
+                <a href="../../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../garbage-collection.html">
+            
+                <a href="../../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../glossary.html">
+            
+                <a href="../../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../help.html">
+            
+                <a href="../../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../insecure.html">
+            
+                <a href="../../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../introduction.html">
+            
+                <a href="../../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../migration.html">
+            
+                <a href="../../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../notifications.html">
+            
+                <a href="../../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Token Scope Documentation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="docker-registry-token-scope-and-access">Docker Registry Token Scope and Access</h1>
+<p>Tokens used by the registry are always restricted what resources they may
+be used to access, where those resources may be accessed, and what actions
+may be done on those resources. Tokens always have the context of a user which
+the token was originally created for. This document describes how these
+restrictions are represented and enforced by the authorization server and
+resource providers.</p>
+<h2 id="scope-components">Scope Components</h2>
+<h3 id="subject-authenticated-user">Subject (Authenticated User)</h3>
+<p>The subject represents the user for which a token is valid. Any actions
+performed using an access token should be considered on behalf of the subject.
+This is included in the <code>sub</code> field of access token JWT. A refresh token should
+be limited to a single subject and only be able to give out access tokens for
+that subject.</p>
+<h3 id="audience-resource-provider">Audience (Resource Provider)</h3>
+<p>The audience represents a resource provider which is intended to be able to
+perform the actions specified in the access token. Any resource provider which
+does not match the audience should not use that access token. The audience is
+included in the <code>aud</code> field of the access token JWT. A refresh token should be
+limited to a single audience and only be able to give out access tokens for that
+audience.</p>
+<h3 id="resource-type">Resource Type</h3>
+<p>The resource type represents the type of resource which the resource name is
+intended to represent. This type may be specific to a resource provider but must
+be understood by the authorization server in order to validate the subject
+is authorized for a specific resource.</p>
+<h4 id="resource-class">Resource Class</h4>
+<p>The resource type might have a resource class which further classifies the
+the resource name within the resource type. A class is not required and
+is specific to the resource type.</p>
+<h4 id="example-resource-types">Example Resource Types</h4>
+<ul>
+<li><code>repository</code> - represents a single repository within a registry. A
+repository may represent many manifest or content blobs, but the resource type
+is considered the collections of those items. Actions which may be performed on
+a <code>repository</code> are <code>pull</code> for accessing the collection and <code>push</code> for adding to
+it. By default the <code>repository</code> type has the class of <code>image</code>.</li>
+<li><code>repository(plugin)</code> - represents a single repository of plugins within a
+registry. A plugin repository has the same content and actions as a repository.</li>
+<li><code>registry</code> - represents the entire registry. Used for administrative actions
+or lookup operations that span an entire registry.</li>
+</ul>
+<h3 id="resource-name">Resource Name</h3>
+<p>The resource name represent the name which identifies a resource for a resource
+provider. A resource is identified by this name and the provided resource type.
+An example of a resource name would be the name component of an image tag, such
+as &quot;samalba/myapp&quot; or &quot;hostname/samalba/myapp&quot;.</p>
+<h3 id="resource-actions">Resource Actions</h3>
+<p>The resource actions define the actions which the access token allows to be
+performed on the identified resource. These actions are type specific but will
+normally have actions identifying read and write access on the resource. Example
+for the <code>repository</code> type are <code>pull</code> for read access and <code>push</code> for write
+access.</p>
+<h2 id="authorization-server-use">Authorization Server Use</h2>
+<p>Each access token request may include a scope and an audience. The subject is
+always derived from the passed in credentials or refresh token. When using
+a refresh token the passed in audience must match the audience defined for
+the refresh token. The audience (resource provider) is provided using the
+<code>service</code> field. Multiple resource scopes may be provided using multiple <code>scope</code>
+fields on the <code>GET</code> request. The <code>POST</code> request only takes in a single
+<code>scope</code> field but may use a space to separate a list of multiple resource
+scopes.</p>
+<h3 id="resource-scope-grammar">Resource Scope Grammar</h3>
+<pre class="language-"><code>scope                   := resourcescope [ &apos; &apos; resourcescope ]*
+resourcescope           := resourcetype  &quot;:&quot; resourcename  &quot;:&quot; action [ &apos;,&apos; action ]*
+resourcetype            := resourcetypevalue [ &apos;(&apos; resourcetypevalue &apos;)&apos; ]
+resourcetypevalue       := /[a-z0-9]+/
+resourcename            := [ hostname &apos;/&apos; ] component [ &apos;/&apos; component ]*
+hostname                := hostcomponent [&apos;.&apos; hostcomponent]* [&apos;:&apos; port-number]
+hostcomponent           := /([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])/
+port-number             := /[0-9]+/
+action                  := /[a-z]*/
+component               := alpha-numeric [ separator alpha-numeric ]*
+alpha-numeric           := /[a-z0-9]+/
+separator               := /[_.]|__|[-]*/
+</code></pre><p>Full reference grammar is defined
+<a href="https://pkg.go.dev/github.com/distribution/distribution/reference" target="_blank">here</a>. Currently
+the scope name grammar is a subset of the reference grammar.</p>
+<blockquote>
+<p><strong>NOTE:</strong> that the <code>resourcename</code> may contain one <code>:</code> due to a possible port
+number in the hostname component of the <code>resourcename</code>, so a naive
+implementation that interprets the first three <code>:</code>-delimited tokens of a
+<code>scope</code> to be the <code>resourcetype</code>, <code>resourcename</code>, and a list of <code>action</code>
+would be insufficient.</p>
+</blockquote>
+<h2 id="resource-provider-use">Resource Provider Use</h2>
+<p>Once a resource provider has verified the authenticity of the scope through
+JWT access token verification, the resource provider must ensure that scope
+satisfies the request. The resource provider should match the given audience
+according to name or URI the resource provider uses to identify itself. Any
+denial based on subject is not defined here and is up to resource provider, the
+subject is mainly provided for audit logs and any other user-specific rules
+which may need to be provided but are not defined by the authorization server.</p>
+<p>The resource provider must ensure that ANY resource being accessed as the
+result of a request has the appropriate access scope. Both the resource type
+and resource name must match the accessed resource and an appropriate action
+scope must be included.</p>
+<p>When appropriate authorization is not provided either due to lack of scope
+or missing token, the resource provider to return a <code>WWW-AUTHENTICATE</code> HTTP
+header with the <code>realm</code> as the authorization server, the <code>service</code> as the
+expected audience identifying string, and a <code>scope</code> field for each required
+resource scope to complete the request.</p>
+<h2 id="jwt-access-tokens">JWT Access Tokens</h2>
+<p>Each JWT access token may only have a single subject and audience but multiple
+resource scopes. The subject and audience are put into standard JWT fields
+<code>sub</code> and <code>aud</code>. The resource scope is put into the <code>access</code> field. The
+structure of the access field can be seen in the
+<a href="jwt.html">jwt documentation</a>.</p>
+<h2 id="refresh-tokens">Refresh Tokens</h2>
+<p>A refresh token must be defined for a single subject and audience. Further
+restricting scope to specific type, name, and actions combinations should be
+done by fetching an access token using the refresh token. Since the refresh
+token is not scoped to specific resources for an audience, extra care should
+be taken to only use the refresh token to negotiate new access tokens directly
+with the authorization server, and never with a resource provider.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="oauth.html" class="navigation navigation-prev " aria-label="Previous page: Oauth 2 Token Authentication">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="token.html" class="navigation navigation-next " aria-label="Next page: Token Authentication Specification">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Token Scope Documentation","description":"Describes the scope and access fields used for registry authorization tokens","keywords":"registry, on-prem, images, tags, repository, distribution, advanced, access, scope","level":"1.2.1.4","depth":3,"next":{"title":"Token Authentication Specification","level":"1.2.1.5","depth":3,"path":"spec/auth/token.md","ref":"spec/auth/token.md","articles":[]},"previous":{"title":"Oauth 2 Token Authentication","level":"1.2.1.3","depth":3,"path":"spec/auth/oauth.md","ref":"spec/auth/oauth.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"spec/auth/scope.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1058 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Token Authentication Implementation · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Describe the reference implementation of the Docker Registry v2 authentication schema">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="oauth.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../recipes/apache.html">
+            
+                <a href="../../recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../recipes/">
+            
+                <a href="../../recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../recipes/mirror.html">
+            
+                <a href="../../recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../recipes/nginx.html">
+            
+                <a href="../../recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../../recipes/osx-setup-guide.html">
+            
+                <a href="../../recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.2" data-path="jwt.html">
+            
+                <a href="jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="scope.html">
+            
+                <a href="scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="token.html">
+            
+                <a href="token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../api.html">
+            
+                <a href="../api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../deprecated-schema-v1.html">
+            
+                <a href="../deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../implementations.html">
+            
+                <a href="../implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../json.html">
+            
+                <a href="../json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../manifest-v2-1.html">
+            
+                <a href="../manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../manifest-v2-2.html">
+            
+                <a href="../manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../menu.html">
+            
+                <a href="../menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../storage-drivers/azure.html">
+            
+                <a href="../../storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../storage-drivers/filesystem.html">
+            
+                <a href="../../storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../storage-drivers/gcs.html">
+            
+                <a href="../../storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../storage-drivers/">
+            
+                <a href="../../storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../storage-drivers/inmemory.html">
+            
+                <a href="../../storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../storage-drivers/oss.html">
+            
+                <a href="../../storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../storage-drivers/s3.html">
+            
+                <a href="../../storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../storage-drivers/swift.html">
+            
+                <a href="../../storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../architecture.html">
+            
+                <a href="../../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../compatibility.html">
+            
+                <a href="../../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../configuration.html">
+            
+                <a href="../../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../deploying.html">
+            
+                <a href="../../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../deprecated.html">
+            
+                <a href="../../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../garbage-collection.html">
+            
+                <a href="../../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../glossary.html">
+            
+                <a href="../../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../help.html">
+            
+                <a href="../../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../insecure.html">
+            
+                <a href="../../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../introduction.html">
+            
+                <a href="../../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../migration.html">
+            
+                <a href="../../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../notifications.html">
+            
+                <a href="../../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Token Authentication Implementation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="docker-registry-v2-bearer-token-specification">Docker Registry v2 Bearer token specification</h1>
+<p>This specification covers the <code>distribution/distribution</code> implementation of the
+v2 Registry&apos;s authentication schema.  Specifically, it describes the JSON
+Web Token schema that <code>distribution/distribution</code> has adopted to implement the
+client-opaque Bearer token issued by an authentication service and
+understood by the registry.</p>
+<p>This document borrows heavily from the <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32" target="_blank">JSON Web Token Draft Spec</a></p>
+<h2 id="getting-a-bearer-token">Getting a Bearer Token</h2>
+<p>For this example, the client makes an HTTP GET request to the following URL:</p>
+<pre class="language-"><code>https://auth.docker.io/token?service=registry.docker.io&amp;scope=repository:samalba/my-app:pull,push
+</code></pre><p>The token server should first attempt to authenticate the client using any
+authentication credentials provided with the request. As of Docker 1.8, the
+registry client in the Docker Engine only supports Basic Authentication to
+these token servers. If an attempt to authenticate to the token server fails,
+the token server should return a <code>401 Unauthorized</code> response indicating that
+the provided credentials are invalid.</p>
+<p>Whether the token server requires authentication is up to the policy of that
+access control provider. Some requests may require authentication to determine
+access (such as pushing or pulling a private repository) while others may not
+(such as pulling from a public repository).</p>
+<p>After authenticating the client (which may simply be an anonymous client if
+no attempt was made to authenticate), the token server must next query its
+access control list to determine whether the client has the requested scope. In
+this example request, if I have authenticated as user <code>jlhawn</code>, the token
+server will determine what access I have to the repository <code>samalba/my-app</code>
+hosted by the entity <code>registry.docker.io</code>.</p>
+<p>Once the token server has determined what access the client has to the
+resources requested in the <code>scope</code> parameter, it will take the intersection of
+the set of requested actions on each resource and the set of actions that the
+client has in fact been granted. If the client only has a subset of the
+requested access <strong>it must not be considered an error</strong> as it is not the
+responsibility of the token server to indicate authorization errors as part of
+this workflow.</p>
+<p>Continuing with the example request, the token server will find that the
+client&apos;s set of granted access to the repository is <code>[pull, push]</code> which when
+intersected with the requested access <code>[pull, push]</code> yields an equal set. If
+the granted access set was found only to be <code>[pull]</code> then the intersected set
+would only be <code>[pull]</code>. If the client has no access to the repository then the
+intersected set would be empty, <code>[]</code>.</p>
+<p>It is this intersected set of access which is placed in the returned token.</p>
+<p>The server will now construct a JSON Web Token to sign and return. A JSON Web
+Token has 3 main parts:</p>
+<ol>
+<li><p>Headers</p>
+<p>The header of a JSON Web Token is a standard JOSE header. The &quot;typ&quot; field
+will be &quot;JWT&quot; and it will also contain the &quot;alg&quot; which identifies the
+signing algorithm used to produce the signature. It also must have a &quot;kid&quot;
+field, representing the ID of the key which was used to sign the token.</p>
+<p>The &quot;kid&quot; field has to be in a libtrust fingerprint compatible format.
+Such a format can be generated by following steps:</p>
+<ol>
+<li><p>Take the DER encoded public key which the JWT token was signed against.</p>
+</li>
+<li><p>Create a SHA256 hash out of it and truncate to 240bits.</p>
+</li>
+<li><p>Split the result into 12 base32 encoded groups with <code>:</code> as delimiter.</p>
+</li>
+</ol>
+<p>Here is an example JOSE Header for a JSON Web Token (formatted with
+whitespace for readability):</p>
+<pre class="language-"><code>{
+    &quot;typ&quot;: &quot;JWT&quot;,
+    &quot;alg&quot;: &quot;ES256&quot;,
+    &quot;kid&quot;: &quot;PYYO:TEWU:V7JH:26JV:AQTZ:LJC3:SXVJ:XGHA:34F2:2LAQ:ZRMK:Z7Q6&quot;
+}
+</code></pre><p>It specifies that this object is going to be a JSON Web token signed using
+the key with the given ID using the Elliptic Curve signature algorithm
+using a SHA256 hash.</p>
+</li>
+<li><p>Claim Set</p>
+<p>The Claim Set is a JSON struct containing these standard registered claim
+name fields:</p>
+<dl>
+    <dt>
+        <code>iss</code> (Issuer)
+    </dt>
+    <dd>
+        The issuer of the token, typically the fqdn of the authorization
+        server.
+    </dd>
+    <dt>
+        <code>sub</code> (Subject)
+    </dt>
+    <dd>
+        The subject of the token; the name or id of the client which
+        requested it. This should be empty (`&quot;&quot;`) if the client did not
+        authenticate.
+    </dd>
+    <dt>
+        <code>aud</code> (Audience)
+    </dt>
+    <dd>
+        The intended audience of the token; the name or id of the service
+        which will verify the token to authorize the client/subject.
+    </dd>
+    <dt>
+        <code>exp</code> (Expiration)
+    </dt>
+    <dd>
+        The token should only be considered valid up to this specified date
+        and time.
+    </dd>
+    <dt>
+        <code>nbf</code> (Not Before)
+    </dt>
+    <dd>
+        The token should not be considered valid before this specified date
+        and time.
+    </dd>
+    <dt>
+        <code>iat</code> (Issued At)
+    </dt>
+    <dd>
+        Specifies the date and time which the Authorization server
+        generated this token.
+    </dd>
+    <dt>
+        <code>jti</code> (JWT ID)
+    </dt>
+    <dd>
+        A unique identifier for this token. Can be used by the intended
+        audience to prevent replays of the token.
+    </dd>
+</dl>
+
+<p>The Claim Set will also contain a private claim name unique to this
+authorization server specification:</p>
+<dl>
+    <dt>
+        <code>access</code>
+    </dt>
+    <dd>
+        An array of access entry objects with the following fields:
+
+        <dl>
+            <dt>
+                <code>type</code>
+            </dt>
+            <dd>
+                The type of resource hosted by the service.
+            </dd>
+            <dt>
+                <code>name</code>
+            </dt>
+            <dd>
+                The name of the resource of the given type hosted by the
+                service.
+            </dd>
+            <dt>
+                <code>actions</code>
+            </dt>
+            <dd>
+                An array of strings which give the actions authorized on
+                this resource.
+            </dd>
+        </dl>
+    </dd>
+</dl>
+
+<p>Here is an example of such a JWT Claim Set (formatted with whitespace for
+readability):</p>
+<pre class="language-"><code>{
+    &quot;iss&quot;: &quot;auth.docker.com&quot;,
+    &quot;sub&quot;: &quot;jlhawn&quot;,
+    &quot;aud&quot;: &quot;registry.docker.com&quot;,
+    &quot;exp&quot;: 1415387315,
+    &quot;nbf&quot;: 1415387015,
+    &quot;iat&quot;: 1415387015,
+    &quot;jti&quot;: &quot;tYJCO1c6cnyy7kAn0c7rKPgbV1H1bFws&quot;,
+    &quot;access&quot;: [
+        {
+            &quot;type&quot;: &quot;repository&quot;,
+            &quot;name&quot;: &quot;samalba/my-app&quot;,
+            &quot;actions&quot;: [
+                &quot;pull&quot;,
+                &quot;push&quot;
+            ]
+        }
+    ]
+}
+</code></pre></li>
+<li><p>Signature</p>
+<p>The authorization server will produce a JOSE header and Claim Set with no
+extraneous whitespace, i.e., the JOSE Header from above would be</p>
+<pre class="language-"><code>{&quot;typ&quot;:&quot;JWT&quot;,&quot;alg&quot;:&quot;ES256&quot;,&quot;kid&quot;:&quot;PYYO:TEWU:V7JH:26JV:AQTZ:LJC3:SXVJ:XGHA:34F2:2LAQ:ZRMK:Z7Q6&quot;}
+</code></pre><p>and the Claim Set from above would be</p>
+<pre class="language-"><code>{&quot;iss&quot;:&quot;auth.docker.com&quot;,&quot;sub&quot;:&quot;jlhawn&quot;,&quot;aud&quot;:&quot;registry.docker.com&quot;,&quot;exp&quot;:1415387315,&quot;nbf&quot;:1415387015,&quot;iat&quot;:1415387015,&quot;jti&quot;:&quot;tYJCO1c6cnyy7kAn0c7rKPgbV1H1bFws&quot;,&quot;access&quot;:[{&quot;type&quot;:&quot;repository&quot;,&quot;name&quot;:&quot;samalba/my-app&quot;,&quot;actions&quot;:[&quot;push&quot;,&quot;pull&quot;]}]}
+</code></pre><p>The utf-8 representation of this JOSE header and Claim Set are then
+url-safe base64 encoded (sans trailing &apos;=&apos; buffer), producing:</p>
+<pre class="language-"><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlBZWU86VEVXVTpWN0pIOjI2SlY6QVFUWjpMSkMzOlNYVko6WEdIQTozNEYyOjJMQVE6WlJNSzpaN1E2In0
+</code></pre><p>for the JOSE Header and</p>
+<pre class="language-"><code>eyJpc3MiOiJhdXRoLmRvY2tlci5jb20iLCJzdWIiOiJqbGhhd24iLCJhdWQiOiJyZWdpc3RyeS5kb2NrZXIuY29tIiwiZXhwIjoxNDE1Mzg3MzE1LCJuYmYiOjE0MTUzODcwMTUsImlhdCI6MTQxNTM4NzAxNSwianRpIjoidFlKQ08xYzZjbnl5N2tBbjBjN3JLUGdiVjFIMWJGd3MiLCJhY2Nlc3MiOlt7InR5cGUiOiJyZXBvc2l0b3J5IiwibmFtZSI6InNhbWFsYmEvbXktYXBwIiwiYWN0aW9ucyI6WyJwdXNoIl19XX0
+</code></pre><p>for the Claim Set. These two are concatenated using a &apos;.&apos; character,
+yielding the string:</p>
+<pre class="language-"><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlBZWU86VEVXVTpWN0pIOjI2SlY6QVFUWjpMSkMzOlNYVko6WEdIQTozNEYyOjJMQVE6WlJNSzpaN1E2In0.eyJpc3MiOiJhdXRoLmRvY2tlci5jb20iLCJzdWIiOiJqbGhhd24iLCJhdWQiOiJyZWdpc3RyeS5kb2NrZXIuY29tIiwiZXhwIjoxNDE1Mzg3MzE1LCJuYmYiOjE0MTUzODcwMTUsImlhdCI6MTQxNTM4NzAxNSwianRpIjoidFlKQ08xYzZjbnl5N2tBbjBjN3JLUGdiVjFIMWJGd3MiLCJhY2Nlc3MiOlt7InR5cGUiOiJyZXBvc2l0b3J5IiwibmFtZSI6InNhbWFsYmEvbXktYXBwIiwiYWN0aW9ucyI6WyJwdXNoIl19XX0
+</code></pre><p>This is then used as the payload to a the <code>ES256</code> signature algorithm
+specified in the JOSE header and specified fully in <a href="https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-38#section-3.4" target="_blank">Section 3.4 of the JSON Web Algorithms (JWA)
+draft specification</a></p>
+<p>This example signature will use the following ECDSA key for the server:</p>
+<pre class="language-"><code>{
+    &quot;kty&quot;: &quot;EC&quot;,
+    &quot;crv&quot;: &quot;P-256&quot;,
+    &quot;kid&quot;: &quot;PYYO:TEWU:V7JH:26JV:AQTZ:LJC3:SXVJ:XGHA:34F2:2LAQ:ZRMK:Z7Q6&quot;,
+    &quot;d&quot;: &quot;R7OnbfMaD5J2jl7GeE8ESo7CnHSBm_1N2k9IXYFrKJA&quot;,
+    &quot;x&quot;: &quot;m7zUpx3b-zmVE5cymSs64POG9QcyEpJaYCD82-549_Q&quot;,
+    &quot;y&quot;: &quot;dU3biz8sZ_8GPB-odm8Wxz3lNDr1xcAQQPQaOcr1fmc&quot;
+}
+</code></pre><p>A resulting signature of the above payload using this key is:</p>
+<pre class="language-"><code>QhflHPfbd6eVF4lM9bwYpFZIV0PfikbyXuLx959ykRTBpe3CYnzs6YBK8FToVb5R47920PVLrh8zuLzdCr9t3w
+</code></pre><p>Concatenating all of these together with a <code>.</code> character gives the
+resulting JWT:</p>
+<pre class="language-"><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlBZWU86VEVXVTpWN0pIOjI2SlY6QVFUWjpMSkMzOlNYVko6WEdIQTozNEYyOjJMQVE6WlJNSzpaN1E2In0.eyJpc3MiOiJhdXRoLmRvY2tlci5jb20iLCJzdWIiOiJqbGhhd24iLCJhdWQiOiJyZWdpc3RyeS5kb2NrZXIuY29tIiwiZXhwIjoxNDE1Mzg3MzE1LCJuYmYiOjE0MTUzODcwMTUsImlhdCI6MTQxNTM4NzAxNSwianRpIjoidFlKQ08xYzZjbnl5N2tBbjBjN3JLUGdiVjFIMWJGd3MiLCJhY2Nlc3MiOlt7InR5cGUiOiJyZXBvc2l0b3J5IiwibmFtZSI6InNhbWFsYmEvbXktYXBwIiwiYWN0aW9ucyI6WyJwdXNoIl19XX0.QhflHPfbd6eVF4lM9bwYpFZIV0PfikbyXuLx959ykRTBpe3CYnzs6YBK8FToVb5R47920PVLrh8zuLzdCr9t3w
+</code></pre></li>
+</ol>
+<p>This can now be placed in an HTTP response and returned to the client to use to
+authenticate to the audience service:</p>
+<pre class="language-"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{&quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlBZWU86VEVXVTpWN0pIOjI2SlY6QVFUWjpMSkMzOlNYVko6WEdIQTozNEYyOjJMQVE6WlJNSzpaN1E2In0.eyJpc3MiOiJhdXRoLmRvY2tlci5jb20iLCJzdWIiOiJqbGhhd24iLCJhdWQiOiJyZWdpc3RyeS5kb2NrZXIuY29tIiwiZXhwIjoxNDE1Mzg3MzE1LCJuYmYiOjE0MTUzODcwMTUsImlhdCI6MTQxNTM4NzAxNSwianRpIjoidFlKQ08xYzZjbnl5N2tBbjBjN3JLUGdiVjFIMWJGd3MiLCJhY2Nlc3MiOlt7InR5cGUiOiJyZXBvc2l0b3J5IiwibmFtZSI6InNhbWFsYmEvbXktYXBwIiwiYWN0aW9ucyI6WyJwdXNoIl19XX0.QhflHPfbd6eVF4lM9bwYpFZIV0PfikbyXuLx959ykRTBpe3CYnzs6YBK8FToVb5R47920PVLrh8zuLzdCr9t3w&quot;}
+</code></pre><h2 id="using-the-signed-token">Using the signed token</h2>
+<p>Once the client has a token, it will try the registry request again with the
+token placed in the HTTP <code>Authorization</code> header like so:</p>
+<pre class="language-"><code>Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IkJWM0Q6MkFWWjpVQjVaOktJQVA6SU5QTDo1RU42Ok40SjQ6Nk1XTzpEUktFOkJWUUs6M0ZKTDpQT1RMIn0.eyJpc3MiOiJhdXRoLmRvY2tlci5jb20iLCJzdWIiOiJCQ0NZOk9VNlo6UUVKNTpXTjJDOjJBVkM6WTdZRDpBM0xZOjQ1VVc6NE9HRDpLQUxMOkNOSjU6NUlVTCIsImF1ZCI6InJlZ2lzdHJ5LmRvY2tlci5jb20iLCJleHAiOjE0MTUzODczMTUsIm5iZiI6MTQxNTM4NzAxNSwiaWF0IjoxNDE1Mzg3MDE1LCJqdGkiOiJ0WUpDTzFjNmNueXk3a0FuMGM3cktQZ2JWMUgxYkZ3cyIsInNjb3BlIjoiamxoYXduOnJlcG9zaXRvcnk6c2FtYWxiYS9teS1hcHA6cHVzaCxwdWxsIGpsaGF3bjpuYW1lc3BhY2U6c2FtYWxiYTpwdWxsIn0.Y3zZSwaZPqy4y9oRBVRImZyv3m_S9XDHF1tWwN7mL52C_IiA73SJkWVNsvNqpJIn5h7A2F8biv_S2ppQ1lgkbw
+</code></pre><p>This is also described in <a href="https://tools.ietf.org/html/rfc6750#section-2.1" target="_blank">Section 2.1 of RFC 6750: The OAuth 2.0 Authorization Framework: Bearer Token Usage</a></p>
+<h2 id="verifying-the-token">Verifying the token</h2>
+<p>The registry must now verify the token presented by the user by inspecting the
+claim set within. The registry will:</p>
+<ul>
+<li>Ensure that the issuer (<code>iss</code> claim) is an authority it trusts.</li>
+<li>Ensure that the registry identifies as the audience (<code>aud</code> claim).</li>
+<li>Check that the current time is between the <code>nbf</code> and <code>exp</code> claim times.</li>
+<li>If enforcing single-use tokens, check that the JWT ID (<code>jti</code> claim) value has
+not been seen before.<ul>
+<li>To enforce this, the registry may keep a record of <code>jti</code>s it has seen for
+up to the <code>exp</code> time of the token to prevent token replays.</li>
+</ul>
+</li>
+<li>Check the <code>access</code> claim value and use the identified resources and the list
+of actions authorized to determine whether the token grants the required
+level of access for the operation the client is attempting to perform.</li>
+<li>Verify that the signature of the token is valid.</li>
+</ul>
+<p>If any of these requirements are not met, the registry will return a
+<code>403 Forbidden</code> response to indicate that the token is invalid.</p>
+<p><strong>Note</strong>: it is only at this point in the workflow that an authorization error
+may occur. The token server should <em>not</em> return errors when the user does not
+have the requested authorization. Instead, the returned token should indicate
+whatever of the requested scope the client does have (the intersection of
+requested and granted access). If the token does not supply proper
+authorization then the registry will return the appropriate error.</p>
+<p>At no point in this process should the registry need to call back to the
+authorization server. The registry only needs to be supplied with the trusted
+public keys to verify the token signatures.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Docker Registry Token Authentication">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="oauth.html" class="navigation navigation-next " aria-label="Next page: Oauth 2 Token Authentication">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Token Authentication Implementation","description":"Describe the reference implementation of the Docker Registry v2 authentication schema","keywords":"registry, on-prem, images, tags, repository, distribution, JWT authentication, advanced","level":"1.2.1.2","depth":3,"next":{"title":"Oauth 2 Token Authentication","level":"1.2.1.3","depth":3,"path":"spec/auth/oauth.md","ref":"spec/auth/oauth.md","articles":[]},"previous":{"title":"Docker Registry Token Authentication","level":"1.2.1.1","depth":3,"path":"spec/auth/index.md","ref":"spec/auth/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"spec/auth/jwt.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,958 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Image Manifest V 2 Schema 1 · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="image manifest for the Registry.">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="manifest-v2-2.html" />
+    
+    
+    <link rel="prev" href="json.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../recipes/apache.html">
+            
+                <a href="../recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../recipes/">
+            
+                <a href="../recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../recipes/mirror.html">
+            
+                <a href="../recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../recipes/nginx.html">
+            
+                <a href="../recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../recipes/osx-setup-guide.html">
+            
+                <a href="../recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="auth/">
+            
+                <a href="auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="auth/jwt.html">
+            
+                <a href="auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="auth/oauth.html">
+            
+                <a href="auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="auth/scope.html">
+            
+                <a href="auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="auth/token.html">
+            
+                <a href="auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="deprecated-schema-v1.html">
+            
+                <a href="deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="implementations.html">
+            
+                <a href="implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="json.html">
+            
+                <a href="json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="manifest-v2-1.html">
+            
+                <a href="manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="manifest-v2-2.html">
+            
+                <a href="manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="menu.html">
+            
+                <a href="menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../storage-drivers/azure.html">
+            
+                <a href="../storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../storage-drivers/filesystem.html">
+            
+                <a href="../storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../storage-drivers/gcs.html">
+            
+                <a href="../storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../storage-drivers/">
+            
+                <a href="../storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../storage-drivers/inmemory.html">
+            
+                <a href="../storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../storage-drivers/oss.html">
+            
+                <a href="../storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../storage-drivers/s3.html">
+            
+                <a href="../storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../storage-drivers/swift.html">
+            
+                <a href="../storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architecture.html">
+            
+                <a href="../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../compatibility.html">
+            
+                <a href="../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../configuration.html">
+            
+                <a href="../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deploying.html">
+            
+                <a href="../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deprecated.html">
+            
+                <a href="../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../garbage-collection.html">
+            
+                <a href="../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../help.html">
+            
+                <a href="../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../insecure.html">
+            
+                <a href="../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../introduction.html">
+            
+                <a href="../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../notifications.html">
+            
+                <a href="../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Image Manifest V 2 Schema 1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="image-manifest-version-2-schema-1">Image Manifest Version 2, Schema 1</h1>
+<blockquote>
+<p><strong>Deprecated</strong></p>
+<p>Image Manifest v2, Schema 1 is deprecated. Use <a href="manifest-v2-2.html">Image Manifest v2, Schema 2</a>,
+or the <a href="https://github.com/opencontainers/image-spec" target="_blank">OCI Image Specification</a>.
+Image Manifest v2, Schema 1 should not be used for purposes other than backward
+compatibility.</p>
+</blockquote>
+<p>This document outlines the format of the V2 image manifest. The image
+manifest described herein was introduced in the Docker daemon in the <a href="https://github.com/docker/docker/commit/9f482a66ab37ec396ac61ed0c00d59122ac07453" target="_blank">v1.3.0
+release</a>.
+It is a provisional manifest to provide a compatibility with the <a href="https://github.com/docker/docker/blob/master/image/spec/v1.md" target="_blank">V1 Image
+format</a>, as the
+requirements are defined for the <a href="https://github.com/distribution/distribution/pull/62" target="_blank">V2 Schema 2
+image</a>.</p>
+<p>Image manifests describe the various constituents of a docker image.  Image
+manifests can be serialized to JSON format with the following media types:</p>
+<table>
+<thead>
+<tr>
+<th>Manifest Type</th>
+<th>Media Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>manifest</td>
+<td>&quot;application/vnd.docker.distribution.manifest.v1+json&quot;</td>
+</tr>
+<tr>
+<td>signed manifest</td>
+<td>&quot;application/vnd.docker.distribution.manifest.v1+prettyjws&quot;</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note that &quot;application/json&quot; will also be accepted for schema 1.</em></p>
+<p>References:</p>
+<ul>
+<li><a href="https://github.com/docker/docker/issues/9015" target="_blank">Proposal: JSON Registry API V2.1</a></li>
+<li><a href="https://github.com/docker/docker/issues/8093" target="_blank">Proposal: Provenance step 1 - Transform images for validation and verification</a></li>
+</ul>
+<h2 id="manifest-field-descriptions"><em>Manifest</em> Field Descriptions</h2>
+<p>Manifest provides the base accessible fields for working with V2 image format
+ in the registry.</p>
+<ul>
+<li><p><strong><code>name</code></strong> <em>string</em></p>
+<p>  name is the name of the image&apos;s repository</p>
+</li>
+<li><p><strong><code>tag</code></strong> <em>string</em></p>
+<p>  tag is the tag of the image</p>
+</li>
+<li><p><strong><code>architecture</code></strong> <em>string</em></p>
+<p> architecture is the host architecture on which this image is intended to
+ run.  This is for information purposes and not currently used by the engine</p>
+</li>
+<li><p><strong><code>fsLayers</code></strong> <em>array</em></p>
+<p> fsLayers is a list of filesystem layer blob sums contained in this image.</p>
+<p> An fsLayer is a struct consisting of the following fields</p>
+<pre class="language-"><code>- **`blobSum`** *digest.Digest*
+
+blobSum is the digest of the referenced filesystem image layer. A
+digest must be a sha256 hash.
+</code></pre></li>
+</ul>
+<ul>
+<li><p><strong><code>history</code></strong> <em>array</em></p>
+<p> history is a list of unstructured historical data for v1 compatibility. It
+ contains ID of the image layer and ID of the layer&apos;s parent layers.</p>
+<p> history is a struct consisting of the following fields</p>
+<ul>
+<li><p><strong><code>v1Compatibility</code></strong> string</p>
+<p> V1Compatibility is the raw V1 compatibility information. This will
+ contain the JSON object describing the V1 of this image.</p>
+</li>
+</ul>
+</li>
+<li><p><strong><code>schemaVersion</code></strong> <em>int</em></p>
+<p> SchemaVersion is the image manifest schema that this image follows.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>:the length of <code>history</code> must be equal to the length of <code>fsLayers</code> and
+entries in each are correlated by index.</p>
+</blockquote>
+<h2 id="signed-manifests">Signed Manifests</h2>
+<p>Signed manifests provides an envelope for a signed image manifest.  A signed
+manifest consists of an image manifest along with an additional field
+containing the signature of the manifest.</p>
+<p>The docker client can verify signed manifests and displays a message to the user.</p>
+<h3 id="signing-manifests">Signing Manifests</h3>
+<p>Image manifests can be signed in two different ways: with a <em>libtrust</em> private
+ key or an x509 certificate chain.  When signing with an x509 certificate chain,
+ the public key of the first element in the chain must be the public key
+ corresponding with the sign key.</p>
+<h3 id="signed-manifest-field-description">Signed Manifest Field Description</h3>
+<p>Signed manifests include an image manifest and a list of signatures generated
+by <em>libtrust</em>.  A signature consists of the following fields:</p>
+<ul>
+<li><p><strong><code>header</code></strong> <em><a href="http://tools.ietf.org/html/draft-ietf-jose-json-web-signature-31#section-2" target="_blank">JOSE</a></em></p>
+<p> A <a href="http://self-issued.info/docs/draft-ietf-jose-json-web-signature.html" target="_blank">JSON Web Signature</a></p>
+</li>
+<li><p><strong><code>signature</code></strong> <em>string</em></p>
+<p>  A signature for the image manifest, signed by a <em>libtrust</em> private key</p>
+</li>
+<li><p><strong><code>protected</code></strong> <em>string</em></p>
+<p>  The signed protected header</p>
+</li>
+</ul>
+<h2 id="example-manifest">Example Manifest</h2>
+<p><em>Example showing the official &apos;hello-world&apos; image manifest.</em></p>
+<pre class="language-"><code>{
+   &quot;name&quot;: &quot;hello-world&quot;,
+   &quot;tag&quot;: &quot;latest&quot;,
+   &quot;architecture&quot;: &quot;amd64&quot;,
+   &quot;fsLayers&quot;: [
+      {
+         &quot;blobSum&quot;: &quot;sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef&quot;
+      },
+      {
+         &quot;blobSum&quot;: &quot;sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef&quot;
+      },
+      {
+         &quot;blobSum&quot;: &quot;sha256:cc8567d70002e957612902a8e985ea129d831ebe04057d88fb644857caa45d11&quot;
+      },
+      {
+         &quot;blobSum&quot;: &quot;sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef&quot;
+      }
+   ],
+   &quot;history&quot;: [
+      {
+         &quot;v1Compatibility&quot;: &quot;{\&quot;id\&quot;:\&quot;e45a5af57b00862e5ef5782a9925979a02ba2b12dff832fd0991335f4a11e5c5\&quot;,\&quot;parent\&quot;:\&quot;31cbccb51277105ba3ae35ce33c22b69c9e3f1002e76e4c736a2e8ebff9d7b5d\&quot;,\&quot;created\&quot;:\&quot;2014-12-31T22:57:59.178729048Z\&quot;,\&quot;container\&quot;:\&quot;27b45f8fb11795b52e9605b686159729b0d9ca92f76d40fb4f05a62e19c46b4f\&quot;,\&quot;container_config\&quot;:{\&quot;Hostname\&quot;:\&quot;8ce6509d66e2\&quot;,\&quot;Domainname\&quot;:\&quot;\&quot;,\&quot;User\&quot;:\&quot;\&quot;,\&quot;Memory\&quot;:0,\&quot;MemorySwap\&quot;:0,\&quot;CpuShares\&quot;:0,\&quot;Cpuset\&quot;:\&quot;\&quot;,\&quot;AttachStdin\&quot;:false,\&quot;AttachStdout\&quot;:false,\&quot;AttachStderr\&quot;:false,\&quot;PortSpecs\&quot;:null,\&quot;ExposedPorts\&quot;:null,\&quot;Tty\&quot;:false,\&quot;OpenStdin\&quot;:false,\&quot;StdinOnce\&quot;:false,\&quot;Env\&quot;:[\&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\&quot;],\&quot;Cmd\&quot;:[\&quot;/bin/sh\&quot;,\&quot;-c\&quot;,\&quot;#(nop) CMD [/hello]\&quot;],\&quot;Image\&quot;:\&quot;31cbccb51277105ba3ae35ce33c22b69c9e3f1002e76e4c736a2e8ebff9d7b5d\&quot;,\&quot;Volumes\&quot;:null,\&quot;WorkingDir\&quot;:\&quot;\&quot;,\&quot;Entrypoint\&quot;:null,\&quot;NetworkDisabled\&quot;:false,\&quot;MacAddress\&quot;:\&quot;\&quot;,\&quot;OnBuild\&quot;:[],\&quot;SecurityOpt\&quot;:null,\&quot;Labels\&quot;:null},\&quot;docker_version\&quot;:\&quot;1.4.1\&quot;,\&quot;config\&quot;:{\&quot;Hostname\&quot;:\&quot;8ce6509d66e2\&quot;,\&quot;Domainname\&quot;:\&quot;\&quot;,\&quot;User\&quot;:\&quot;\&quot;,\&quot;Memory\&quot;:0,\&quot;MemorySwap\&quot;:0,\&quot;CpuShares\&quot;:0,\&quot;Cpuset\&quot;:\&quot;\&quot;,\&quot;AttachStdin\&quot;:false,\&quot;AttachStdout\&quot;:false,\&quot;AttachStderr\&quot;:false,\&quot;PortSpecs\&quot;:null,\&quot;ExposedPorts\&quot;:null,\&quot;Tty\&quot;:false,\&quot;OpenStdin\&quot;:false,\&quot;StdinOnce\&quot;:false,\&quot;Env\&quot;:[\&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\&quot;],\&quot;Cmd\&quot;:[\&quot;/hello\&quot;],\&quot;Image\&quot;:\&quot;31cbccb51277105ba3ae35ce33c22b69c9e3f1002e76e4c736a2e8ebff9d7b5d\&quot;,\&quot;Volumes\&quot;:null,\&quot;WorkingDir\&quot;:\&quot;\&quot;,\&quot;Entrypoint\&quot;:null,\&quot;NetworkDisabled\&quot;:false,\&quot;MacAddress\&quot;:\&quot;\&quot;,\&quot;OnBuild\&quot;:[],\&quot;SecurityOpt\&quot;:null,\&quot;Labels\&quot;:null},\&quot;architecture\&quot;:\&quot;amd64\&quot;,\&quot;os\&quot;:\&quot;linux\&quot;,\&quot;Size\&quot;:0}\n&quot;
+      },
+      {
+         &quot;v1Compatibility&quot;: &quot;{\&quot;id\&quot;:\&quot;e45a5af57b00862e5ef5782a9925979a02ba2b12dff832fd0991335f4a11e5c5\&quot;,\&quot;parent\&quot;:\&quot;31cbccb51277105ba3ae35ce33c22b69c9e3f1002e76e4c736a2e8ebff9d7b5d\&quot;,\&quot;created\&quot;:\&quot;2014-12-31T22:57:59.178729048Z\&quot;,\&quot;container\&quot;:\&quot;27b45f8fb11795b52e9605b686159729b0d9ca92f76d40fb4f05a62e19c46b4f\&quot;,\&quot;container_config\&quot;:{\&quot;Hostname\&quot;:\&quot;8ce6509d66e2\&quot;,\&quot;Domainname\&quot;:\&quot;\&quot;,\&quot;User\&quot;:\&quot;\&quot;,\&quot;Memory\&quot;:0,\&quot;MemorySwap\&quot;:0,\&quot;CpuShares\&quot;:0,\&quot;Cpuset\&quot;:\&quot;\&quot;,\&quot;AttachStdin\&quot;:false,\&quot;AttachStdout\&quot;:false,\&quot;AttachStderr\&quot;:false,\&quot;PortSpecs\&quot;:null,\&quot;ExposedPorts\&quot;:null,\&quot;Tty\&quot;:false,\&quot;OpenStdin\&quot;:false,\&quot;StdinOnce\&quot;:false,\&quot;Env\&quot;:[\&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\&quot;],\&quot;Cmd\&quot;:[\&quot;/bin/sh\&quot;,\&quot;-c\&quot;,\&quot;#(nop) CMD [/hello]\&quot;],\&quot;Image\&quot;:\&quot;31cbccb51277105ba3ae35ce33c22b69c9e3f1002e76e4c736a2e8ebff9d7b5d\&quot;,\&quot;Volumes\&quot;:null,\&quot;WorkingDir\&quot;:\&quot;\&quot;,\&quot;Entrypoint\&quot;:null,\&quot;NetworkDisabled\&quot;:false,\&quot;MacAddress\&quot;:\&quot;\&quot;,\&quot;OnBuild\&quot;:[],\&quot;SecurityOpt\&quot;:null,\&quot;Labels\&quot;:null},\&quot;docker_version\&quot;:\&quot;1.4.1\&quot;,\&quot;config\&quot;:{\&quot;Hostname\&quot;:\&quot;8ce6509d66e2\&quot;,\&quot;Domainname\&quot;:\&quot;\&quot;,\&quot;User\&quot;:\&quot;\&quot;,\&quot;Memory\&quot;:0,\&quot;MemorySwap\&quot;:0,\&quot;CpuShares\&quot;:0,\&quot;Cpuset\&quot;:\&quot;\&quot;,\&quot;AttachStdin\&quot;:false,\&quot;AttachStdout\&quot;:false,\&quot;AttachStderr\&quot;:false,\&quot;PortSpecs\&quot;:null,\&quot;ExposedPorts\&quot;:null,\&quot;Tty\&quot;:false,\&quot;OpenStdin\&quot;:false,\&quot;StdinOnce\&quot;:false,\&quot;Env\&quot;:[\&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\&quot;],\&quot;Cmd\&quot;:[\&quot;/hello\&quot;],\&quot;Image\&quot;:\&quot;31cbccb51277105ba3ae35ce33c22b69c9e3f1002e76e4c736a2e8ebff9d7b5d\&quot;,\&quot;Volumes\&quot;:null,\&quot;WorkingDir\&quot;:\&quot;\&quot;,\&quot;Entrypoint\&quot;:null,\&quot;NetworkDisabled\&quot;:false,\&quot;MacAddress\&quot;:\&quot;\&quot;,\&quot;OnBuild\&quot;:[],\&quot;SecurityOpt\&quot;:null,\&quot;Labels\&quot;:null},\&quot;architecture\&quot;:\&quot;amd64\&quot;,\&quot;os\&quot;:\&quot;linux\&quot;,\&quot;Size\&quot;:0}\n&quot;
+      }
+   ],
+   &quot;schemaVersion&quot;: 1,
+   &quot;signatures&quot;: [
+      {
+         &quot;header&quot;: {
+            &quot;jwk&quot;: {
+               &quot;crv&quot;: &quot;P-256&quot;,
+               &quot;kid&quot;: &quot;OD6I:6DRK:JXEJ:KBM4:255X:NSAA:MUSF:E4VM:ZI6W:CUN2:L4Z6:LSF4&quot;,
+               &quot;kty&quot;: &quot;EC&quot;,
+               &quot;x&quot;: &quot;3gAwX48IQ5oaYQAYSxor6rYYc_6yjuLCjtQ9LUakg4A&quot;,
+               &quot;y&quot;: &quot;t72ge6kIA1XOjqjVoEOiPPAURltJFBMGDSQvEGVB010&quot;
+            },
+            &quot;alg&quot;: &quot;ES256&quot;
+         },
+         &quot;signature&quot;: &quot;XREm0L8WNn27Ga_iE_vRnTxVMhhYY0Zst_FfkKopg6gWSoTOZTuW4rK0fg_IqnKkEKlbD83tD46LKEGi5aIVFg&quot;,
+         &quot;protected&quot;: &quot;eyJmb3JtYXRMZW5ndGgiOjY2MjgsImZvcm1hdFRhaWwiOiJDbjAiLCJ0aW1lIjoiMjAxNS0wNC0wOFQxODo1Mjo1OVoifQ&quot;
+      }
+   ]
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="json.html" class="navigation navigation-prev " aria-label="Previous page: Docker Distribution JSON Canonicalization">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="manifest-v2-2.html" class="navigation navigation-next " aria-label="Next page: Image Manifest V 2 Schema 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Image Manifest V 2 Schema 1","description":"image manifest for the Registry.","keywords":"registry, on-prem, images, tags, repository, distribution, api, advanced, manifest","level":"1.2.7","depth":2,"next":{"title":"Image Manifest V 2 Schema 2","level":"1.2.8","depth":2,"path":"spec/manifest-v2-2.md","ref":"spec/manifest-v2-2.md","articles":[]},"previous":{"title":"Docker Distribution JSON Canonicalization","level":"1.2.6","depth":2,"path":"spec/json.md","ref":"spec/json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"spec/manifest-v2-1.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

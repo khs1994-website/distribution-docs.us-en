@@ -1,0 +1,998 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>S 3 Storage Driver · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Explains how to use the S3 storage drivers">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="swift.html" />
+    
+    
+    <link rel="prev" href="oss.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../recipes/apache.html">
+            
+                <a href="../recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../recipes/">
+            
+                <a href="../recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../recipes/mirror.html">
+            
+                <a href="../recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../recipes/nginx.html">
+            
+                <a href="../recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../recipes/osx-setup-guide.html">
+            
+                <a href="../recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../spec/auth/">
+            
+                <a href="../spec/auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../spec/auth/jwt.html">
+            
+                <a href="../spec/auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../spec/auth/oauth.html">
+            
+                <a href="../spec/auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../spec/auth/scope.html">
+            
+                <a href="../spec/auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../spec/auth/token.html">
+            
+                <a href="../spec/auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../spec/api.html">
+            
+                <a href="../spec/api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../spec/deprecated-schema-v1.html">
+            
+                <a href="../spec/deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../spec/implementations.html">
+            
+                <a href="../spec/implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../spec/json.html">
+            
+                <a href="../spec/json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../spec/manifest-v2-1.html">
+            
+                <a href="../spec/manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../spec/manifest-v2-2.html">
+            
+                <a href="../spec/manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../spec/menu.html">
+            
+                <a href="../spec/menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="azure.html">
+            
+                <a href="azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="gcs.html">
+            
+                <a href="gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="inmemory.html">
+            
+                <a href="inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="oss.html">
+            
+                <a href="oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="s3.html">
+            
+                <a href="s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="swift.html">
+            
+                <a href="swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architecture.html">
+            
+                <a href="../architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../compatibility.html">
+            
+                <a href="../compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../configuration.html">
+            
+                <a href="../configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../deploying.html">
+            
+                <a href="../deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../deprecated.html">
+            
+                <a href="../deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../garbage-collection.html">
+            
+                <a href="../garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../help.html">
+            
+                <a href="../help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../insecure.html">
+            
+                <a href="../insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../introduction.html">
+            
+                <a href="../introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../notifications.html">
+            
+                <a href="../notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >S 3 Storage Driver</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>An implementation of the <code>storagedriver.StorageDriver</code> interface which uses
+Amazon S3 or S3 compatible services for object storage.</p>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>accesskey</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Your AWS Access Key. If you use <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html" target="_blank">IAM roles</a>, omit to fetch temporary credentials from IAM.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>secretkey</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Your AWS Secret Key. If you use <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html" target="_blank">IAM roles</a>, omit to fetch temporary credentials from IAM.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>region</code></td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left">The AWS region in which your bucket exists.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>regionendpoint</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Endpoint for S3 compatible storage services (Minio, etc).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>forcepathstyle</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">To enable path-style addressing when the value is set to <code>true</code>. The default is <code>true</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>bucket</code></td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left">The bucket name in which you want to store the registry&apos;s data.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>encrypt</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Specifies whether the registry stores the image in encrypted format or not. A boolean value. The default is <code>false</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>keyid</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Optional KMS key ID to use for encryption (encrypt must be true, or this parameter is ignored). The default is <code>none</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>secure</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Indicates whether to use HTTPS instead of HTTP. A boolean value. The default is <code>true</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>skipverify</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Skips TLS verification when the value is set to <code>true</code>. The default is <code>false</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>v4auth</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Indicates whether the registry uses Version 4 of AWS&apos;s authentication. The default is <code>true</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>chunksize</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The S3 API requires multipart upload chunks to be at least 5MB. This value should be a number that is larger than 5 <em> 1024 </em> 1024.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rootdirectory</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">This is a prefix that is applied to all S3 keys to allow you to segment data in your bucket if necessary.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>storageclass</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The S3 storage class applied to each registry file. The default is <code>STANDARD</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>objectacl</code></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The S3 Canned ACL for objects. The default value is &quot;private&quot;.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong> You can provide empty strings for your access and secret keys to run the driver
+on an ec2 instance and handles authentication with the instance&apos;s credentials. If you
+use <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html" target="_blank">IAM roles</a>,
+omit these keys to fetch temporary credentials from IAM.</p>
+</blockquote>
+<p><code>region</code>: The name of the aws region in which you would like to store objects (for example <code>us-east-1</code>). For a list of regions, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html" target="_blank">Regions, Availability Zones, and Local Zones</a>.</p>
+<p><code>regionendpoint</code>: (optional) Endpoint URL for S3 compatible APIs. This should not be provided when using Amazon S3.</p>
+<p><code>forcepathstyle</code>: (optional) The force path style for S3 compatible APIs. Some manufacturers only support force path style, while others only support DNS based bucket routing. Amazon S3 supports both.</p>
+<p><code>bucket</code>: The name of your S3 bucket where you wish to store objects. The bucket must exist prior to the driver initialization.</p>
+<p><code>encrypt</code>: (optional) Whether you would like your data encrypted on the server side (defaults to false if not specified).</p>
+<p><code>keyid</code>: (optional) Whether you would like your data encrypted with this KMS key ID (defaults to none if not specified, is ignored if encrypt is not true).</p>
+<p><code>secure</code>: (optional) Whether you would like to transfer data to the bucket over ssl or not. Defaults to true (meaning transferring over ssl) if not specified. While setting this to false improves performance, it is not recommended due to security concerns.</p>
+<p><code>v4auth</code>: (optional) Whether you would like to use aws signature version 4 with your requests. This defaults to <code>false</code> if not specified. The <code>eu-central-1</code> region does not work with version 2 signatures, so the driver errors out if initialized with this region and v4auth set to <code>false</code>.</p>
+<p><code>chunksize</code>: (optional) The default part size for multipart uploads (performed by WriteStream) to S3. The default is 10 MB. Keep in mind that the minimum part size for S3 is 5MB. Depending on the speed of your connection to S3, a larger chunk size may result in better performance; faster connections benefit from larger chunk sizes.</p>
+<p><code>rootdirectory</code>: (optional) The root directory tree in which all registry files are stored. Defaults to the empty string (bucket root).</p>
+<p><code>storageclass</code>: (optional) The storage class applied to each registry file. Defaults to STANDARD. Valid options are STANDARD and REDUCED_REDUNDANCY.</p>
+<p><code>objectacl</code>: (optional) The canned object ACL to be applied to each registry object. Defaults to <code>private</code>. If you are using a bucket owned by another AWS account, it is recommended that you set this to <code>bucket-owner-full-control</code> so that the bucket owner can access your objects. Other valid options are available in the <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl" target="_blank">AWS S3 documentation</a>.</p>
+<h2 id="s3-permission-scopes">S3 permission scopes</h2>
+<p>The following AWS policy is required by the registry for push and pull. Make sure to replace <code>S3_BUCKET_NAME</code> with the name of your bucket.</p>
+<pre class="language-"><code>{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;s3:ListBucket&quot;,
+        &quot;s3:GetBucketLocation&quot;,
+        &quot;s3:ListBucketMultipartUploads&quot;
+      ],
+      &quot;Resource&quot;: &quot;arn:aws:s3:::S3_BUCKET_NAME&quot;
+    },
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;s3:PutObject&quot;,
+        &quot;s3:GetObject&quot;,
+        &quot;s3:DeleteObject&quot;,
+        &quot;s3:ListMultipartUploadParts&quot;,
+        &quot;s3:AbortMultipartUpload&quot;
+      ],
+      &quot;Resource&quot;: &quot;arn:aws:s3:::S3_BUCKET_NAME/*&quot;
+    }
+  ]
+}
+</code></pre><p>See <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html" target="_blank">the S3 policy documentation</a> for more details.</p>
+<h1 id="cloudfront-as-middleware-with-s3-backend">CloudFront as Middleware with S3 backend</h1>
+<h2 id="use-case">Use Case</h2>
+<p>Adding CloudFront as a middleware for your S3 backed registry can dramatically
+improve pull times. Your registry can retrieve your images
+from edge servers, rather than the geographically limited location of your S3
+bucket. The farther your registry is from your bucket, the more improvements are
+possible. See <a href="https://aws.amazon.com/cloudfront/details/" target="_blank">Amazon CloudFront</a>.</p>
+<p>An alternative method for CloudFront that requires less configuration and will use
+the same edge servers is <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html" target="_blank">S3 Transfer Acceleration</a>.
+Please check acceleration <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html#transfer-acceleration-requirements" target="_blank">Requirements</a>
+to see whether you need CloudFront or S3 Transfer Acceleration.</p>
+<h2 id="configuring-cloudfront-for-distribution">Configuring CloudFront for Distribution</h2>
+<p>If you are unfamiliar with creating a CloudFront distribution, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html" target="_blank">Getting
+Started with
+Cloudfront</a>.</p>
+<p>Defaults can be kept in most areas except:</p>
+<h3 id="origin">Origin:</h3>
+<ul>
+<li><p>The CloudFront distribution must be created such that the <code>Origin Path</code> is set
+to the directory level of the root &quot;docker&quot; key in S3. If your registry exists
+on the root of the bucket, this path should be left blank.</p>
+</li>
+<li><p>For private S3 buckets, you must set <code>Restrict Bucket Access</code> to <code>Yes</code>. See
+the <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html" target="_blank">CloudFront documentation</a>.</p>
+</li>
+</ul>
+<h3 id="behaviors">Behaviors:</h3>
+<ul>
+<li>Viewer Protocol Policy: HTTPS Only</li>
+<li>Allowed HTTP Methods: GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE</li>
+<li>Cached HTTP Methods: OPTIONS (checked)</li>
+<li>Restrict Viewer Access (Use Signed URLs or Signed Cookies): Yes<ul>
+<li>Trusted Signers: Self (Can add other accounts as long as you have access to CloudFront Key Pairs for those additional accounts)</li>
+</ul>
+</li>
+</ul>
+<h2 id="registry-configuration">Registry configuration</h2>
+<p>Here the <code>middleware</code> option is used. It is still important to keep the
+<code>storage</code> option, because CloudFront only handles <code>pull</code> actions; <code>push</code> actions
+are still directly written to S3.</p>
+<p>The following example shows a minimum configuration:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">...</span>
+<span class="token key atrule">storage</span><span class="token punctuation">:</span>
+  <span class="token key atrule">s3</span><span class="token punctuation">:</span>
+    <span class="token key atrule">region</span><span class="token punctuation">:</span> us<span class="token punctuation">-</span>east<span class="token punctuation">-</span><span class="token number">1</span>
+    <span class="token key atrule">bucket</span><span class="token punctuation">:</span> docker.myregistry.com
+<span class="token key atrule">middleware</span><span class="token punctuation">:</span>
+  <span class="token key atrule">storage</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> cloudfront
+      <span class="token key atrule">options</span><span class="token punctuation">:</span>
+        <span class="token key atrule">baseurl</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//abcdefghijklmn.cloudfront.net/
+        <span class="token key atrule">privatekey</span><span class="token punctuation">:</span> /etc/docker/cloudfront/pk<span class="token punctuation">-</span>ABCEDFGHIJKLMNOPQRST.pem
+        <span class="token key atrule">keypairid</span><span class="token punctuation">:</span> ABCEDFGHIJKLMNOPQRST
+<span class="token punctuation">...</span>
+</code></pre>
+<h2 id="cloudfront-key-pair">CloudFront Key-Pair</h2>
+<p>A CloudFront key-pair is required for all AWS accounts needing access to your
+CloudFront distribution. You must have access to your AWS account&apos;s root credentials to create the required Cloudfront keypair. For information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html#private-content-creating-cloudfront-key-pairs" target="_blank">Creating CloudFront Key
+Pairs</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="oss.html" class="navigation navigation-prev " aria-label="Previous page: Aliyun OSS Storage Driver">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="swift.html" class="navigation navigation-next " aria-label="Next page: Open Stack Swift Storage Driver">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Explains how to use the S3 storage drivers","keywords":"registry, service, driver, images, storage,  S3","title":"S 3 Storage Driver","level":"1.3.7","depth":2,"next":{"title":"Open Stack Swift Storage Driver","level":"1.3.8","depth":2,"path":"storage-drivers/swift.md","ref":"storage-drivers/swift.md","articles":[]},"previous":{"title":"Aliyun OSS Storage Driver","level":"1.3.6","depth":2,"path":"storage-drivers/oss.md","ref":"storage-drivers/oss.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"storage-drivers/s3.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

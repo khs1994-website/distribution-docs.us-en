@@ -1,0 +1,937 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Test An Insecure Registry · distribution 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Deploying a Registry in an insecure fashion">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="introduction.html" />
+    
+    
+    <link rel="prev" href="help.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="recipes/apache.html">
+            
+                <a href="recipes/apache.html">
+            
+                    
+                    Authenticate Proxy With Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="recipes/">
+            
+                <a href="recipes/">
+            
+                    
+                    Recipes Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="recipes/mirror.html">
+            
+                <a href="recipes/mirror.html">
+            
+                    
+                    Registry As A Pull Through Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="recipes/nginx.html">
+            
+                <a href="recipes/nginx.html">
+            
+                    
+                    Authenticate Proxy With Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="recipes/osx-setup-guide.html">
+            
+                <a href="recipes/osx-setup-guide.html">
+            
+                    
+                    Mac OS Setup Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Spec
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="spec/auth/">
+            
+                <a href="spec/auth/">
+            
+                    
+                    Docker Registry Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="spec/auth/jwt.html">
+            
+                <a href="spec/auth/jwt.html">
+            
+                    
+                    Token Authentication Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="spec/auth/oauth.html">
+            
+                <a href="spec/auth/oauth.html">
+            
+                    
+                    Oauth 2 Token Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="spec/auth/scope.html">
+            
+                <a href="spec/auth/scope.html">
+            
+                    
+                    Token Scope Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="spec/auth/token.html">
+            
+                <a href="spec/auth/token.html">
+            
+                    
+                    Token Authentication Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="spec/api.html">
+            
+                <a href="spec/api.html">
+            
+                    
+                    HTTP API V 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="spec/deprecated-schema-v1.html">
+            
+                <a href="spec/deprecated-schema-v1.html">
+            
+                    
+                    Update Deprecated Schema Image Manifest Version 2 V 1 Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="spec/implementations.html">
+            
+                <a href="spec/implementations.html">
+            
+                    
+                    Implementations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="spec/">
+            
+                <a href="spec/">
+            
+                    
+                    Reference Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="spec/json.html">
+            
+                <a href="spec/json.html">
+            
+                    
+                    Docker Distribution JSON Canonicalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="spec/manifest-v2-1.html">
+            
+                <a href="spec/manifest-v2-1.html">
+            
+                    
+                    Image Manifest V 2 Schema 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="spec/manifest-v2-2.html">
+            
+                <a href="spec/manifest-v2-2.html">
+            
+                    
+                    Image Manifest V 2 Schema 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="spec/menu.html">
+            
+                <a href="spec/menu.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Storage Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="storage-drivers/azure.html">
+            
+                <a href="storage-drivers/azure.html">
+            
+                    
+                    Microsoft Azure Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="storage-drivers/filesystem.html">
+            
+                <a href="storage-drivers/filesystem.html">
+            
+                    
+                    Filesystem Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="storage-drivers/gcs.html">
+            
+                <a href="storage-drivers/gcs.html">
+            
+                    
+                    Google Cloud Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="storage-drivers/">
+            
+                <a href="storage-drivers/">
+            
+                    
+                    Registry Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="storage-drivers/inmemory.html">
+            
+                <a href="storage-drivers/inmemory.html">
+            
+                    
+                    In Memory Storage Driver Testing Only
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="storage-drivers/oss.html">
+            
+                <a href="storage-drivers/oss.html">
+            
+                    
+                    Aliyun OSS Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="storage-drivers/s3.html">
+            
+                <a href="storage-drivers/s3.html">
+            
+                    
+                    S 3 Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="storage-drivers/swift.html">
+            
+                <a href="storage-drivers/swift.html">
+            
+                    
+                    Open Stack Swift Storage Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="architecture.html">
+            
+                <a href="architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="compatibility.html">
+            
+                <a href="compatibility.html">
+            
+                    
+                    Registry Compatibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuring A Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="deploying.html">
+            
+                <a href="deploying.html">
+            
+                    
+                    Deploy A Registry Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="deprecated.html">
+            
+                <a href="deprecated.html">
+            
+                    
+                    Docker Registry Deprecation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="garbage-collection.html">
+            
+                <a href="garbage-collection.html">
+            
+                    
+                    Garbage Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="glossary.html">
+            
+                <a href="glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="help.html">
+            
+                <a href="help.html">
+            
+                    
+                    Get Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="insecure.html">
+            
+                <a href="insecure.html">
+            
+                    
+                    Test An Insecure Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    About Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    Work With Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Test An Insecure Registry</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>While it&apos;s highly recommended to secure your registry using a TLS certificate
+issued by a known CA, you can choose to use self-signed certificates, or use
+your registry over an unencrypted HTTP connection. Either of these choices
+involves security trade-offs and additional configuration steps.</p>
+<h2 id="deploy-a-plain-http-registry">Deploy a plain HTTP registry</h2>
+<blockquote>
+<p><strong>Warning</strong>:
+It&apos;s not possible to use an insecure registry with basic authentication.
+{:.warning}</p>
+</blockquote>
+<p>This procedure configures Docker to entirely disregard security for your
+registry. This is <strong>very</strong> insecure and is not recommended. It exposes your
+registry to trivial man-in-the-middle (MITM) attacks. Only use this solution for
+isolated testing or in a tightly controlled, air-gapped environment.</p>
+<ol>
+<li><p>Edit the <code>daemon.json</code> file, whose default location is
+<code>/etc/docker/daemon.json</code> on Linux or
+<code>C:\ProgramData\docker\config\daemon.json</code> on Windows Server. If you use
+Docker Desktop for Mac or Docker Desktop for Windows, click the Docker icon, choose
+<strong>Preferences</strong> (Mac) or <strong>Settings</strong> (Windows), and choose <strong>Docker Engine</strong>.</p>
+<p>If the <code>daemon.json</code> file does not exist, create it. Assuming there are no
+other settings in the file, it should have the following contents:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;insecure-registries&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;myregistrydomain.com:5000&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Substitute the address of your insecure registry for the one in the example.</p>
+<p>With insecure registries enabled, Docker goes through the following steps:</p>
+<ul>
+<li>First, try using HTTPS.<ul>
+<li>If HTTPS is available but the certificate is invalid, ignore the error
+about the certificate.</li>
+<li>If HTTPS is not available, fall back to HTTP.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>Restart Docker for the changes to take effect.</li>
+</ol>
+<p>Repeat these steps on every Engine host that wants to access your registry.</p>
+<h2 id="use-self-signed-certificates">Use self-signed certificates</h2>
+<blockquote>
+<p><strong>Warning</strong>:
+Using this along with basic authentication requires to <strong>also</strong> trust the certificate into the OS cert store for some versions of docker (see below)
+{:.warning}</p>
+</blockquote>
+<p>This is more secure than the insecure registry solution.</p>
+<ol>
+<li><p>Generate your own certificate:</p>
+<pre class="language-"><code class="lang-console">$ mkdir -p certs
+
+$ openssl req \
+  -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key \
+  -addext &quot;subjectAltName = DNS:myregistry.domain.com&quot; \
+  -x509 -days 365 -out certs/domain.crt
+</code></pre>
+<p>Be sure to use the name <code>myregistry.domain.com</code> as a CN.</p>
+</li>
+<li><p>Use the result to <a href="deploying.html#get-a-certificate">start your registry with TLS enabled</a>.</p>
+</li>
+<li><p>Instruct every Docker daemon to trust that certificate. The way to do this
+depends on your OS.</p>
+<ul>
+<li><p><strong>Linux</strong>: Copy the <code>domain.crt</code> file to
+<code>/etc/docker/certs.d/myregistrydomain.com:5000/ca.crt</code> on every Docker
+host. You do not need to restart Docker.</p>
+</li>
+<li><p><strong>Windows Server</strong>:</p>
+<ol>
+<li><p>Open Windows Explorer, right-click the <code>domain.crt</code>
+file, and choose Install certificate. When prompted, select the following
+options:</p>
+<p>| Store location                                | local machine |
+| Place all certificates in the following store | selected      |</p>
+</li>
+<li><p>Click <strong>Browser</strong> and select <strong>Trusted Root Certificate Authorities</strong>.</p>
+</li>
+<li><p>Click <strong>Finish</strong>. Restart Docker.</p>
+</li>
+</ol>
+</li>
+<li><p><strong>Docker Desktop for Mac</strong>: Follow the instructions in
+<a href="../desktop/mac/index.md#add-tls-certificates">Adding custom CA certificates</a>{: target=&quot;<em>blank&quot; rel=&quot;noopener&quot; class=&quot;</em>&quot;}.
+Restart Docker.</p>
+</li>
+<li><p><strong>Docker Desktop for Windows</strong>: Follow the instructions in
+<a href="../desktop/windows/index.md#adding-tls-certificates">Adding custom CA certificates</a>{: target=&quot;<em>blank&quot; rel=&quot;noopener&quot; class=&quot;</em>&quot;}.
+Restart Docker.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="troubleshoot-insecure-registry">Troubleshoot insecure registry</h2>
+<p>This section lists some common failures and how to recover from them.</p>
+<h3 id="failing">Failing...</h3>
+<p>Failing to configure the Engine daemon and trying to pull from a registry that is not using
+TLS results in the following message:</p>
+<pre class="language-"><code class="lang-none">FATA[0000] Error response from daemon: v1 ping attempt failed with error:
+Get https://myregistrydomain.com:5000/v1/_ping: tls: oversized record received with length 20527.
+If this private registry supports only HTTP or HTTPS with an unknown CA certificate, add
+`--insecure-registry myregistrydomain.com:5000` to the daemon&apos;s arguments.
+In the case of HTTPS, if you have access to the registry&apos;s CA certificate, no need for the flag;
+simply place the CA certificate at /etc/docker/certs.d/myregistrydomain.com:5000/ca.crt
+</code></pre>
+<h3 id="docker-still-complains-about-the-certificate-when-using-authentication">Docker still complains about the certificate when using authentication?</h3>
+<p>When using authentication, some versions of Docker also require you to trust the
+certificate at the OS level.</p>
+<h4 id="ubuntu">Ubuntu</h4>
+<pre class="language-"><code class="lang-console">$ cp certs/domain.crt /usr/local/share/ca-certificates/myregistrydomain.com.crt
+update-ca-certificates
+</code></pre>
+<h4 id="red-hat-enterprise-linux">Red Hat Enterprise Linux</h4>
+<pre class="language-"><code class="lang-console">$ cp certs/domain.crt /etc/pki/ca-trust/source/anchors/myregistrydomain.com.crt
+update-ca-trust
+</code></pre>
+<h4 id="oracle-linux">Oracle Linux</h4>
+<pre class="language-"><code class="lang-console">$ update-ca-trust enable
+</code></pre>
+<p>Restart Docker for the changes to take effect.</p>
+<h3 id="windows">Windows</h3>
+<p>Open Windows Explorer, right-click the certificate, and choose
+<strong>Install certificate</strong>.</p>
+<p>Then, select the following options:</p>
+<ul>
+<li>Store location: local machine</li>
+<li>Check <strong>place all certificates in the following store</strong></li>
+<li>Click <strong>Browser</strong>, and select <strong>Trusted Root Certificate Authorities</strong></li>
+<li>Click <strong>Finish</strong></li>
+</ul>
+<p><a href="https://technet.microsoft.com/en-us/library/cc754841(v=ws.11" target="_blank">Learn more about managing TLS certificates</a>.aspx#BKMK_addlocal).</p>
+<p>After adding the CA certificate to Windows, restart Docker Desktop for Windows.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="help.html" class="navigation navigation-prev " aria-label="Previous page: Get Help">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="introduction.html" class="navigation navigation-next " aria-label="Next page: About Registry">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Deploying a Registry in an insecure fashion","keywords":"registry, on-prem, images, tags, repository, distribution, insecure","title":"Test An Insecure Registry","level":"1.12","depth":1,"next":{"title":"About Registry","level":"1.13","depth":1,"path":"introduction.md","ref":"introduction.md","articles":[]},"previous":{"title":"Get Help","level":"1.11","depth":1,"path":"help.md","ref":"help.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"distribution 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"insecure.md","mtime":"2023-01-31T01:27:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T01:28:02.961Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
